@@ -1,4 +1,4 @@
-# Client Theme Starter Kit
+# CBRE Custom Theme
 
 This is a repo dedicated to being pulled down as a starting point for creating a client theme inside of Octiv.
 

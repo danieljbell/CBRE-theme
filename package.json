@@ -1,5 +1,5 @@
 {
-  "name": "client-theme-starter-kit",
+  "name": "CBRE-Client-Theme",
   "version": "1.0.0",
   "description": "Starter Kit for creating a high-touch custom theme for pre-sale or post-sale clients",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danieljbell/client-theme-template.git"
+    "url": "git+https://github.com/danieljbell/CBRE-theme.git"
   },
   "author": "Daniel Bell",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/danieljbell/client-theme-template/issues"
+    "url": "https://github.com/danieljbell/CBRE-theme/issues"
   },
-  "homepage": "https://github.com/danieljbell/client-theme-template#readme",
+  "homepage": "https://github.com/danieljbell/CBRE-theme#readme",
   "devDependencies": {
     "autoprefixer": "^7.2.3",
     "browser-sync": "^2.21.0",
