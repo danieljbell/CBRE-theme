@@ -1,5 +1,18 @@
 /*
 =================================================================
-GITHUB REPO: https://github.com/danieljbell/CBRE-theme
+GITHUB REPO: https://github.com/danieljbell/client-theme-template
 =================================================================
 */
+#content_editor h1, .pdf-page-content h1 { text-transform: uppercase; }
+#content_editor h2, .pdf-page-content h2 { text-transform: uppercase; font-family: "Futura PT"; }
+.cbre-full-page { position: relative; left: -30px; top: -20px; width: calc(100% + 60px); min-height: 800px; padding: 20px 30px; }
+.cbre-cover-page { background-image: url(../img/cover-page-bg.jpg); background-size: cover; background-position: center; text-align: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+.cbre-cover-page h1, .cbre-cover-page h2, .cbre-cover-page p { color: #fff !important; }
+.cbre-cover-page-content-container { background-color: rgba(0, 107, 78, 0.9); padding: 30px; margin-left: 60px; margin-right: 60px; margin-bottom: 2em; }
+.cbre-cover-page-logo-container { background-color: rgba(0, 107, 78, 0.9); margin-bottom: 2em; position: relative; left: -30px; width: calc(100% + 60px); }
+.cbre-cover-page-logo-container img { display: block; margin: 0 auto; padding: 0.5em; }
+.cbre-brand-box { background-color: rgba(0, 107, 78, 0.9); padding: 30px; margin: 60px; }
+.cbre-brand-box h1, .cbre-brand-box h2, .cbre-brand-box h3, .cbre-brand-box h4, .cbre-brand-box h5, .cbre-brand-box h6, .cbre-brand-box p, .cbre-brand-box ul, .cbre-brand-box ol, .cbre-brand-box li { color: #fff !important; }
+.cbre-title-bar { background-color: #006B4E; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); padding: 30px 30px 20px; }
+.cbre-title-bar h1 { color: #fff !important; margin-top: 20px !important; margin-bottom: 0 !important; }
+.cbre-has-text-brand-two { color: #E01F26 !important; }
