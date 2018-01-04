@@ -5,14 +5,54 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 */
 #content_editor h1, .pdf-page-content h1 { text-transform: uppercase; }
 #content_editor h2, .pdf-page-content h2 { text-transform: uppercase; font-family: "Futura PT"; }
-.cbre-full-page { position: relative; left: -30px; top: -20px; width: calc(100% + 60px); min-height: 800px; padding: 20px 30px; }
-.cbre-cover-page { background-image: url(../img/cover-page-bg.jpg); background-size: cover; background-position: center; text-align: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+#content_editor blockquote, .pdf-page-content blockquote { color: #6BBE45; font-size: 1.25em !important; font-family: "Futura PT"; }
+#content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 30px !important; }
+#content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1) { padding-left: 0 !important; }
+#content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n) { padding-right: 0 !important; }
+.cbre-full-page { position: relative; left: -30px; top: -20px; width: calc(100% + 60px); padding: 20px 30px; margin-bottom: -40px; background-size: cover; background-position: center; }
+.cbre-full-width { position: relative; left: -30px; width: calc(100% + 60px); }
+.cbre-full-width img { width: 100%; }
+.cbre-cover-page { background-image: url(../img/cover-page-bg.jpg); text-align: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
 .cbre-cover-page h1, .cbre-cover-page h2, .cbre-cover-page p { color: #fff !important; }
 .cbre-cover-page-content-container { background-color: rgba(0, 107, 78, 0.9); padding: 30px; margin-left: 60px; margin-right: 60px; margin-bottom: 2em; }
 .cbre-cover-page-logo-container { background-color: rgba(0, 107, 78, 0.9); margin-bottom: 2em; position: relative; left: -30px; width: calc(100% + 60px); }
-.cbre-cover-page-logo-container img { display: block; margin: 0 auto; padding: 0.5em; }
-.cbre-brand-box { background-color: rgba(0, 107, 78, 0.9); padding: 30px; margin: 60px; }
+.cbre-cover-page-logo-container img { display: block; margin: 0 auto; padding: 1em; max-width: 150px !important; }
+.cbre-brand-box { background-color: rgba(0, 107, 78, 0.9); }
 .cbre-brand-box h1, .cbre-brand-box h2, .cbre-brand-box h3, .cbre-brand-box h4, .cbre-brand-box h5, .cbre-brand-box h6, .cbre-brand-box p, .cbre-brand-box ul, .cbre-brand-box ol, .cbre-brand-box li { color: #fff !important; }
 .cbre-title-bar { background-color: #006B4E; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); padding: 30px 30px 20px; }
 .cbre-title-bar h1 { color: #fff !important; margin-top: 20px !important; margin-bottom: 0 !important; }
+.cbre-has-text-white { color: #fff !important; }
 .cbre-has-text-brand-two { color: #E01F26 !important; }
+.cbre-headshot-container { text-align: center !important; }
+.cbre-headshot { border-radius: 50%; border: 2px solid #fff; }
+.cbre-headshot-name { text-align: center !important; font-size: 0.85em !important; }
+.cbre-professional-profile { position: relative; margin-top: 30px; }
+.cbre-professional-profile:before { content: ''; position: absolute; left: 15px; top: 15px; width: 75px; height: 75px; border-top: 2px solid white; border-left: 2px solid white; }
+.cbre-professional-profile .cbre-headshot { position: absolute; top: -40px; right: -5px; }
+.cbre-professional-profile .cbre-professional-profile-name, .cbre-professional-profile .cbre-professional-profile-title { margin-bottom: 0 !important; }
+.cbre-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
+.cbre-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
+.cbre-pad-t { padding-top: 30px !important; }
+.cbre-pad-t-more { padding-top: 60px !important; }
+.cbre-pad-b { padding-bottom: 30px !important; }
+.cbre-pad-b-more { padding-bottom: 60px !important; }
+.cbre-pad-x { padding-left: 30px !important; padding-right: 30px !important; }
+.cbre-pad-x-more { padding-left: 60px !important; padding-right: 60px !important; }
+.cbre-pad-l { padding-left: 30px !important; }
+.cbre-pad-l-more { padding-left: 60px !important; }
+.cbre-pad-r { padding-right: 30px !important; }
+.cbre-pad-r-more { padding-right: 60px !important; }
+.cbre-mar-y { margin-top: 30px !important; margin-bottom: 30px !important; }
+.cbre-mar-y-more { margin-top: 60px !important; margin-bottom: 60px !important; }
+.cbre-mar-t { margin-top: 30px !important; }
+.cbre-mar-t-more { margin-top: 60px !important; }
+.cbre-mar-b { margin-bottom: 30px !important; }
+.cbre-mar-b-more { margin-bottom: 60px !important; }
+.cbre-mar-b-neg { margin-bottom: -30px !important; }
+.cbre-mar-x { margin-left: 30px !important; margin-right: 30px !important; }
+.cbre-mar-x-more { margin-left: 60px !important; margin-right: 60px !important; }
+.cbre-mar-l { margin-left: 30px !important; }
+.cbre-mar-l-more { margin-left: 60px !important; }
+.cbre-mar-r { margin-right: 30px !important; }
+.cbre-mar-r-more { margin-right: 60px !important; }
+@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } .cbre-professional-profile { margin-top: 60px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
