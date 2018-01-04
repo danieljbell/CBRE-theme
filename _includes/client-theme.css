@@ -30,6 +30,19 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-professional-profile:before { content: ''; position: absolute; left: 15px; top: 15px; width: 75px; height: 75px; border-top: 2px solid white; border-left: 2px solid white; }
 .cbre-professional-profile .cbre-headshot { position: absolute; top: -40px; right: -5px; }
 .cbre-professional-profile .cbre-professional-profile-name, .cbre-professional-profile .cbre-professional-profile-title { margin-bottom: 0 !important; }
+.cbre-transition-custom-image { position: absolute; right: -30px; top: 100%; max-width: 350px !important; width: 100%; }
+.cbre-property-transition-container .grid .one-third:first-child li { margin-right: 1.3334em !important; }
+.cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0.6667em !important; margin-right: 0.6667em !important; }
+.cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 1.3334em !important; }
+.cbre-property-transition-container h2 { margin-bottom: 1em !important; }
+.cbre-property-transition-container h3 { font-weight: 300 !important; text-transform: uppercase; text-align: center; color: #6BBE45 !important; border-top: 2px solid #6BBE45; border-bottom: 2px solid #6BBE45; padding-top: 10px !important; padding-bottom: 10px !important; margin-bottom: 0 !important; }
+.cbre-property-transition-container ul { list-style-type: none !important; }
+.cbre-property-transition-container li { font-size: 0.7em !important; background-color: #006B4E; color: #fff !important; padding: 1em 1em 1em 35px !important; border-bottom: 1px solid #6BBE45; position: relative; }
+.cbre-property-transition-container li:before { content: ''; position: absolute; top: 50%; left: 10px; width: 15px; height: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); border: 2px solid #fff; border-radius: 50%; }
+.cbre-property-transition-container li:last-child { border-bottom: 0; }
+.cbre-advantage-visual { list-style-type: none; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: relative; }
+.cbre-advantage-visual:after { content: ''; position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 100%; height: 1px; border-top: 1px dashed #00946c; }
+.cbre-advantage-visual li { text-align: center; padding: 1.5em !important; font-size: 0.75em !important; line-height: 1.5 !important; color: #fff !important; width: 200px; height: 200px; background-color: #00946c; border-radius: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .cbre-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
 .cbre-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
 .cbre-pad-t { padding-top: 30px !important; }
@@ -55,4 +68,4 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-mar-l-more { margin-left: 60px !important; }
 .cbre-mar-r { margin-right: 30px !important; }
 .cbre-mar-r-more { margin-right: 60px !important; }
-@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } .cbre-professional-profile { margin-top: 60px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
+@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } .cbre-professional-profile { margin-top: 60px; } .cbre-transition-custom-image { position: relative; right: auto; top: auto; max-width: 100% !important; } .cbre-property-transition-container .grid .one-third { margin-bottom: 1.5em !important; } .cbre-property-transition-container .grid .one-third:first-child li { margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0 !important; margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 0 !important; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
