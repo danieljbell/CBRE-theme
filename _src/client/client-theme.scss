@@ -30,6 +30,14 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   font-family: $base-font-family;
 }
 
+#content_editor ul,
+.pdf-page-content ul {
+  padding-left: 1em !important;
+  li {
+    margin-bottom: 0.5em !important;
+  }
+}
+
 // GRID
 #content_editor .no-gutters .half,
 .pdf-page-content .no-gutters .half {
@@ -42,6 +50,14 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   }
   @media screen and (max-width: 568px) {
     padding: 0 !important;
+  }
+}
+
+.cbre-vertical-align {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 568px) {
+    display: block;
   }
 }
 
@@ -117,6 +133,23 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 // ===============
 .cbre-brand-box {
   background-color: transparentize($brand, 0.1);
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    color: #fff !important;
+  }
+}
+
+.cbre-brand-three-box {
+  background-color: $brand-three;
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    color: #fff !important;
+  }
+}
+
+.cbre-white-box {
+  background-color: transparentize(#fff, 0.6);
+  color: #fff !important;
   h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     color: #fff !important;
   }
@@ -260,6 +293,11 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 
   ul {
     list-style-type: none !important;
+    // THIS IS TO OVERRIDE DEFAULT STYLES
+    #content_editor &,
+    .pdf-page-content & {
+      padding-left: 0 !important;  
+    }
   }
 
   li {
@@ -290,20 +328,47 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 
 }
 
+
+.cbre-pulse-container {
+
+  blockquote {
+    margin-left: 105px;
+    max-width: 55%;
+  }
+
+}
+
 .cbre-advantage-visual {
+  margin-top: 20px;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   position: relative;
+  z-index: 1;
+  // OVERRIDING DEFAULT LIST PADDING
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+  @media screen and (max-width: 568px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &:after {
     content: '';
     position: absolute;
+    z-index: -1;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
     height: 1px;
-    border-top: 1px dashed lighten($brand, 8%);
+    border-top: 3px dashed lighten($brand, 8%);
+    @media screen and (max-width: 568px) {
+      transform: rotate(90deg);
+      width: 150%;
+      max-width: 300px;
+    }
   }
 
   li {
@@ -318,6 +383,91 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
     border-radius: 50%;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 568px) {
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+.cbre-pulse-icon-list {
+  list-style-type: none;
+
+  p {
+    margin-bottom: 0 !important;
+    color: #fff !important;
+  }
+
+  h4 {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+  }
+
+  .cbre-pulse-icon-item {
+    display: flex;
+    align-items: center;
+    // OVERRIDING DEFAULT LIST ITEM MARGIN
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .cbre-pulse-icon {
+    background-color: $brand;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 50px;
+      max-height: 50px;
+    }
+
+  }
+
+  .cbre-pulse-content {
+    background-color: transparentize(#fff, 0.7);
+    padding: 1em 2em !important;
+    width: 100%;
+  }
+
+  li:first-child .cbre-pulse-content {
+    padding-top: 2em !important;
+  }
+
+  li:last-child .cbre-pulse-content {
+    padding-bottom: 2em !important;
+  }
+
+}
+
+
+.cbre-contractor-induction-list {
+  list-style-type: none;
+  margin-top: 30px;
+
+  .cbre-contractor-induction-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .cbre-contractor-induction-icon {
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  .cbre-contractor-induction-content {
+    font-size: 0.85em !important;
+    line-height: 1.4 !important;
   }
 
 }
