@@ -38,6 +38,26 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   }
 }
 
+#content_editor table,
+.pdf-page-content table {
+  margin-bottom: 1em;
+
+  th {
+    text-align: left;
+  }
+
+  th,
+  tfoot td {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  tr:nth-child(2n) {
+    background-color: #BCBEC0;
+  }
+
+}
+
 // GRID
 #content_editor .no-gutters .half,
 .pdf-page-content .no-gutters .half,
@@ -111,9 +131,17 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  
   h1, h2, p {
     color: #fff !important;
   }
+
+  .cbre-cover-page-content-container {
+    @media screen and (max-width: 568px) {
+      margin-top: 0 !important;
+    }
+  }
+
 }
 
 .cbre-cover-page-content-container {
@@ -122,6 +150,10 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   margin-left: 60px;
   margin-right: 60px;
   margin-bottom: 2em;
+  @media screen and (max-width: 568px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .cbre-cover-page-logo-container {
@@ -137,6 +169,94 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
     max-width: 150px !important;
   }
 }
+
+
+// ===================
+// RESOURCING STYLES
+// ===================
+.cbre-resourcing-team {
+  background-color: $brand !important;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -90px;
+  
+  .cbre-brand-three-box {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
+.cbre-resourcing-level-one-item,
+.cbre-resourcing-level-two-item {
+  background-color: $brand-three;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #fff;
+  font-size: 0.8em !important;
+  line-height: 1.4 !important;
+
+
+
+  &:before {
+    position: absolute;
+    content: '';
+    border-left: 1px solid #fff;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+  }
+
+}
+
+.cbre-resourcing-level-one-list,
+.cbre-resourcing-level-two-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+  #content_editor & li,
+  .pdf-page-content & li {
+    margin-bottom: 30px !important;
+  }
+
+}
+
+.cbre-resourcing-level-one-list {
+
+  .cbre-resourcing-level-one-item {
+    flex-basis: 20%;
+    &:last-child:before {
+      height: 200px;
+    }
+  }
+  
+  .cbre-resourcing-level-one-item:last-child {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 30px;
+    background-color: lighten($brand, 10%);
+  }
+
+}
+
+.cbre-resourcing-level-two-list {
+  justify-content: space-around;
+  
+  .cbre-resourcing-level-two-item {
+    background-color: lighten($brand, 10%);
+    flex-basis: 35%;
+  }
+
+}
+
 
 
 
@@ -220,6 +340,27 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   max-width: 35px !important;
   max-height: 35px !important;
   margin-right: 0.5em !important;
+}
+
+.cbre-intro-letter {
+  .cbre-mar-x-more {
+    @media screen and (max-width: 568px) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+  .cbre-pad-x-more {
+    @media screen and (max-width: 568px) {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+  }
+  .cbre-pad-y-more {
+    @media screen and (max-width: 568px) {
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+    }
+  }
 }
 
 
@@ -639,6 +780,134 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 
 }
 
+
+.cbre-table {
+  font-size: 0.85em !important;
+  line-height: 1.4 !important;
+  
+  tfoot {
+    color: #fff;
+    background-color: $brand;
+  }
+
+  &.cbre-fee-structure {
+    
+    th {
+      text-align: center !important;
+    }
+
+    th:first-child {
+      text-align: left !important;
+    }
+    
+    td {
+      text-align: center;
+      
+      &:first-child {
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}
+
+// ================
+// CONCLUSION PAGE
+// ================
+.cbre-conclusion-people-list {
+  list-style-type: none;
+  
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+  .cbre-conclusion-people-item {
+    display: table;
+  }
+
+  .cbre-conclusion-people-content,
+  .cbre-conclusion-people-headshot {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .cbre-conclusion-people-content {
+    color: $base-text-color !important;
+    padding-left: 1em !important;
+
+    p {
+      color: $base-text-color !important;      
+      margin-bottom: 0 !important;
+    }
+
+  }
+
+}
+
+
+// ==========
+// BACK COVER
+// ==========
+.cbre-back-cover {
+
+  .cbre-brand-box {
+    position: relative;
+    left: -30px;
+    max-width: 70%;
+    @media screen and (max-width: 568px) {
+      max-width: initial;
+      width: calc(100% + 60px);
+    }
+
+    h1 {
+      margin-bottom: 0.5em !important;
+    }
+
+    p {
+      font-size: 0.8em !important;
+      line-height: 1.4 !important;
+    }
+
+  }
+
+  .align-center {
+    @media screen and (max-width: 568px) {
+      margin-top: 1em !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    } 
+  }
+
+}
+
+#content_editor .cbre-back-cover .align-center p,
+.pdf-page-content .cbre-back-cover .align-center p {
+  font-size: 0.7em !important;
+  line-height: 1.4 !important;
+}
+
+.cbre-back-cover-logo-container {
+  min-height: 400px;
+  position: relative;
+  @media screen and (max-width: 568px) {
+    min-height: 200px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 350px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+
 // SPACING UTILITIES
 .cbre-pad-y {
   padding-top: 30px !important;
@@ -737,4 +1006,8 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
   &-more {
     margin-right: 60px !important;
   }
+}
+
+.cbre-b-a {
+  border: 1px solid #fff;
 }

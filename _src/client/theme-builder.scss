@@ -66,3 +66,22 @@
 #content_editor a {
   color: $base-link-color;
 }
+
+#content_editor table {
+  width: 100%;
+  border-spacing: 0;
+  border-style: solid;
+  border-color: $table-border-color;
+  border-width: $table-border-size;
+  background-color: $table-background-color;
+
+  th,
+  td {
+    padding: $table-padding;
+  }
+
+  th {
+    background-color: $table-heading-background;
+    color: $table-heading-font;
+  }
+}

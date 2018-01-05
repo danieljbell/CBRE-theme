@@ -8,6 +8,10 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 #content_editor blockquote, .pdf-page-content blockquote { color: #6BBE45; font-size: 1.25em !important; font-family: "Futura PT"; }
 #content_editor ul, .pdf-page-content ul { padding-left: 1em !important; }
 #content_editor ul li, .pdf-page-content ul li { margin-bottom: 0.5em !important; }
+#content_editor table, .pdf-page-content table { margin-bottom: 1em; }
+#content_editor table th, .pdf-page-content table th { text-align: left; }
+#content_editor table th, #content_editor table tfoot td, .pdf-page-content table th, .pdf-page-content table tfoot td { text-transform: uppercase; font-weight: 700; }
+#content_editor table tr:nth-child(2n), .pdf-page-content table tr:nth-child(2n) { background-color: #BCBEC0; }
 #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 30px !important; }
 #content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1), #content_editor .no-gutters .one-third:nth-child(2n-1), .pdf-page-content .no-gutters .one-third:nth-child(2n-1), #content_editor .no-gutters .two-thirds:nth-child(2n-1), .pdf-page-content .no-gutters .two-thirds:nth-child(2n-1) { padding-left: 0 !important; }
 #content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n), #content_editor .no-gutters .one-third:nth-child(2n), .pdf-page-content .no-gutters .one-third:nth-child(2n), #content_editor .no-gutters .two-thirds:nth-child(2n), .pdf-page-content .no-gutters .two-thirds:nth-child(2n) { padding-right: 0 !important; }
@@ -20,6 +24,18 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-cover-page-content-container { background-color: rgba(0, 107, 78, 0.9); padding: 30px; margin-left: 60px; margin-right: 60px; margin-bottom: 2em; }
 .cbre-cover-page-logo-container { background-color: rgba(0, 107, 78, 0.9); margin-bottom: 2em; position: relative; left: -30px; width: calc(100% + 60px); }
 .cbre-cover-page-logo-container img { display: block; margin: 0 auto; padding: 1em; max-width: 150px !important; }
+.cbre-resourcing-team { background-color: #006B4E !important; position: relative; z-index: 2; margin-bottom: -90px; }
+.cbre-resourcing-team .cbre-brand-three-box { position: relative; z-index: 1; }
+.cbre-resourcing-level-one-item, .cbre-resourcing-level-two-item { background-color: #6BBE45; padding: 10px; position: relative; border: 1px solid #fff; font-size: 0.8em !important; line-height: 1.4 !important; }
+.cbre-resourcing-level-one-item:before, .cbre-resourcing-level-two-item:before { position: absolute; content: ''; border-left: 1px solid #fff; bottom: 100%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); height: 30px; }
+.cbre-resourcing-level-one-list, .cbre-resourcing-level-two-list { list-style-type: none; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+#content_editor .cbre-resourcing-level-one-list, .pdf-page-content .cbre-resourcing-level-one-list, #content_editor .cbre-resourcing-level-two-list, .pdf-page-content .cbre-resourcing-level-two-list { padding-left: 0 !important; }
+#content_editor .cbre-resourcing-level-one-list li, .pdf-page-content .cbre-resourcing-level-one-list li, #content_editor .cbre-resourcing-level-two-list li, .pdf-page-content .cbre-resourcing-level-two-list li { margin-bottom: 30px !important; }
+.cbre-resourcing-level-one-list .cbre-resourcing-level-one-item { -webkit-flex-basis: 20%; -ms-flex-preferred-size: 20%; flex-basis: 20%; }
+.cbre-resourcing-level-one-list .cbre-resourcing-level-one-item:last-child:before { height: 200px; }
+.cbre-resourcing-level-one-list .cbre-resourcing-level-one-item:last-child { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; width: 100%; padding: 30px; background-color: #009e73; }
+.cbre-resourcing-level-two-list { -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; }
+.cbre-resourcing-level-two-list .cbre-resourcing-level-two-item { background-color: #009e73; -webkit-flex-basis: 35%; -ms-flex-preferred-size: 35%; flex-basis: 35%; }
 .cbre-brand-box { background-color: rgba(0, 107, 78, 0.9); color: #fff !important; }
 .cbre-brand-box h1, .cbre-brand-box h2, .cbre-brand-box h3, .cbre-brand-box h4, .cbre-brand-box h5, .cbre-brand-box h6, .cbre-brand-box p, .cbre-brand-box ul, .cbre-brand-box ol, .cbre-brand-box li { color: #fff !important; }
 .cbre-brand-three-box { background-color: #6BBE45; color: #fff !important; }
@@ -92,6 +108,24 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-case-study-meta-box .cbre-blockquote-quote:before, .cbre-case-study-meta-box .cbre-blockquote-quote:after { content: '"'; position: absolute; color: #fff !important; font-size: 1.6em !important; line-height: 1 !important; font-style: italic; }
 .cbre-case-study-meta-box .cbre-blockquote-quote:before { top: -0.1em; left: -0.5em; }
 .cbre-case-study-meta-box .cbre-blockquote-quote:after { position: absolute; bottom: 0em; }
+.cbre-table { font-size: 0.85em !important; line-height: 1.4 !important; }
+.cbre-table tfoot { color: #fff; background-color: #006B4E; }
+.cbre-table.cbre-fee-structure th { text-align: center !important; }
+.cbre-table.cbre-fee-structure th:first-child { text-align: left !important; }
+.cbre-table.cbre-fee-structure td { text-align: center; }
+.cbre-table.cbre-fee-structure td:first-child { text-align: left; }
+.cbre-conclusion-people-list { list-style-type: none; }
+#content_editor .cbre-conclusion-people-list, .pdf-page-content .cbre-conclusion-people-list { padding-left: 0 !important; }
+.cbre-conclusion-people-list .cbre-conclusion-people-item { display: table; }
+.cbre-conclusion-people-list .cbre-conclusion-people-content, .cbre-conclusion-people-list .cbre-conclusion-people-headshot { display: table-cell; vertical-align: middle; }
+.cbre-conclusion-people-list .cbre-conclusion-people-content { color: #58595B !important; padding-left: 1em !important; }
+.cbre-conclusion-people-list .cbre-conclusion-people-content p { color: #58595B !important; margin-bottom: 0 !important; }
+.cbre-back-cover .cbre-brand-box { position: relative; left: -30px; max-width: 70%; }
+.cbre-back-cover .cbre-brand-box h1 { margin-bottom: 0.5em !important; }
+.cbre-back-cover .cbre-brand-box p { font-size: 0.8em !important; line-height: 1.4 !important; }
+#content_editor .cbre-back-cover .align-center p, .pdf-page-content .cbre-back-cover .align-center p { font-size: 0.7em !important; line-height: 1.4 !important; }
+.cbre-back-cover-logo-container { min-height: 400px; position: relative; }
+.cbre-back-cover-logo-container img { width: 100%; max-width: 350px !important; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .cbre-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
 .cbre-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
 .cbre-pad-t { padding-top: 30px !important; }
@@ -117,4 +151,5 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-mar-l-more { margin-left: 60px !important; }
 .cbre-mar-r { margin-right: 30px !important; }
 .cbre-mar-r-more { margin-right: 60px !important; }
-@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 !important; } #content_editor .pull-right, .pdf-page-content .pull-right { float: none; padding-left: 0 !important; padding-right: 0 !important; } .cbre-vertical-align { display: block; } .cbre-professional-profile { margin-top: 60px; } .cbre-transition-custom-image { position: relative; right: auto; top: auto; max-width: 100% !important; } .cbre-property-transition-container .grid .one-third { margin-bottom: 1.5em !important; } .cbre-property-transition-container .grid .one-third:first-child li { margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0 !important; margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 0 !important; } .cbre-advantage-visual { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; } .cbre-advantage-visual:after { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 150%; max-width: 300px; } .cbre-advantage-visual li { margin-bottom: 30px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
+.cbre-b-a { border: 1px solid #fff; }
+@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 !important; } #content_editor .pull-right, .pdf-page-content .pull-right { float: none; padding-left: 0 !important; padding-right: 0 !important; } .cbre-vertical-align { display: block; } .cbre-cover-page .cbre-cover-page-content-container { margin-top: 0 !important; } .cbre-cover-page-content-container { margin-left: 0px; margin-right: 0px; } .cbre-intro-letter .cbre-mar-x-more { margin-left: 0 !important; margin-right: 0 !important; } .cbre-intro-letter .cbre-pad-x-more { padding-left: 30px !important; padding-right: 30px !important; } .cbre-intro-letter .cbre-pad-y-more { padding-top: 30px !important; padding-bottom: 30px !important; } .cbre-professional-profile { margin-top: 60px; } .cbre-transition-custom-image { position: relative; right: auto; top: auto; max-width: 100% !important; } .cbre-property-transition-container .grid .one-third { margin-bottom: 1.5em !important; } .cbre-property-transition-container .grid .one-third:first-child li { margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0 !important; margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 0 !important; } .cbre-advantage-visual { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; } .cbre-advantage-visual:after { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 150%; max-width: 300px; } .cbre-advantage-visual li { margin-bottom: 30px; } .cbre-back-cover .cbre-brand-box { max-width: initial; width: calc(100% + 60px); } .cbre-back-cover .align-center { margin-top: 1em !important; padding-left: 0 !important; padding-right: 0 !important; } .cbre-back-cover-logo-container { min-height: 200px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
