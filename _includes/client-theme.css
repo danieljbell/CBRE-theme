@@ -8,9 +8,9 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 #content_editor blockquote, .pdf-page-content blockquote { color: #6BBE45; font-size: 1.25em !important; font-family: "Futura PT"; }
 #content_editor ul, .pdf-page-content ul { padding-left: 1em !important; }
 #content_editor ul li, .pdf-page-content ul li { margin-bottom: 0.5em !important; }
-#content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 30px !important; }
-#content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1) { padding-left: 0 !important; }
-#content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n) { padding-right: 0 !important; }
+#content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 30px !important; }
+#content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1), #content_editor .no-gutters .one-third:nth-child(2n-1), .pdf-page-content .no-gutters .one-third:nth-child(2n-1), #content_editor .no-gutters .two-thirds:nth-child(2n-1), .pdf-page-content .no-gutters .two-thirds:nth-child(2n-1) { padding-left: 0 !important; }
+#content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n), #content_editor .no-gutters .one-third:nth-child(2n), .pdf-page-content .no-gutters .one-third:nth-child(2n), #content_editor .no-gutters .two-thirds:nth-child(2n), .pdf-page-content .no-gutters .two-thirds:nth-child(2n) { padding-right: 0 !important; }
 .cbre-vertical-align { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .cbre-full-page { position: relative; left: -30px; top: -20px; width: calc(100% + 60px); padding: 20px 30px; margin-bottom: -40px; background-size: cover; background-position: center; }
 .cbre-full-width { position: relative; left: -30px; width: calc(100% + 60px); }
@@ -33,6 +33,9 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-headshot-container { text-align: center !important; }
 .cbre-headshot { border-radius: 50%; border: 2px solid #fff; }
 .cbre-headshot-name { text-align: center !important; font-size: 0.85em !important; }
+.cbre-heading-has-icon { display: table; }
+.cbre-heading-has-icon .cbre-heading-icon, .cbre-heading-has-icon .cbre-heading-content { display: table-cell; vertical-align: middle; }
+.cbre-heading-icon { max-width: 35px !important; max-height: 35px !important; margin-right: 0.5em !important; }
 .cbre-professional-profile { position: relative; margin-top: 30px; }
 .cbre-professional-profile:before { content: ''; position: absolute; left: 15px; top: 15px; width: 75px; height: 75px; border-top: 2px solid white; border-left: 2px solid white; }
 .cbre-professional-profile .cbre-headshot { position: absolute; top: -40px; right: -5px; }
@@ -54,6 +57,7 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-advantage-visual:after { content: ''; position: absolute; z-index: -1; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 100%; height: 1px; border-top: 3px dashed #00946c; }
 .cbre-advantage-visual li { text-align: center; padding: 1.5em !important; font-size: 0.75em !important; line-height: 1.5 !important; color: #fff !important; width: 200px; height: 200px; background-color: #00946c; border-radius: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .cbre-pulse-icon-list { list-style-type: none; }
+#content_editor .cbre-pulse-icon-list, .pdf-page-content .cbre-pulse-icon-list { padding-left: 0 !important; }
 .cbre-pulse-icon-list p { margin-bottom: 0 !important; color: #fff !important; }
 .cbre-pulse-icon-list h4 { color: #fff !important; text-transform: uppercase; font-weight: 300 !important; }
 .cbre-pulse-icon-list .cbre-pulse-icon-item { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
@@ -67,6 +71,27 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-contractor-induction-list .cbre-contractor-induction-item { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .cbre-contractor-induction-list .cbre-contractor-induction-icon { -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; margin-right: 10px; }
 .cbre-contractor-induction-list .cbre-contractor-induction-content { font-size: 0.85em !important; line-height: 1.4 !important; }
+.cbre-icon-list { list-style-type: none; padding-top: 0.5em; }
+.cbre-icon-list li { display: table; }
+#content_editor .cbre-icon-list li, .pdf-page-content .cbre-icon-list li { margin-bottom: 1.25em !important; }
+.cbre-icon-list .cbre-icon-list-icon, .cbre-icon-list .cbre-icon-list-content { display: table-cell; vertical-align: middle; }
+.cbre-icon-list .cbre-icon-list-icon { padding-right: 1em !important; }
+.cbre-icon-list .cbre-icon-list-icon img { max-width: 1.75em !important; }
+#content_editor .cbre-icon-list, .pdf-page-content .cbre-icon-list { padding-left: 0 !important; }
+.cbre-case-study-results-list { list-style-type: none; margin-bottom: 1em !important; }
+#content_editor .cbre-case-study-results-list, .pdf-page-content .cbre-case-study-results-list { padding-left: 0 !important; }
+.cbre-case-study-results-list .cbre-case-study-results-item { font-size: 0.9em !important; line-height: 1.4 !important; position: relative; border-bottom: 1px solid #BCBEC0; padding-left: 40px !important; padding-bottom: 1em !important; padding-top: 1em !important; }
+#content_editor .cbre-case-study-results-list .cbre-case-study-results-item, .pdf-page-content .cbre-case-study-results-list .cbre-case-study-results-item { margin-bottom: 0 !important; }
+.cbre-case-study-results-list .cbre-case-study-results-item:before { position: absolute; top: 50%; left: 0px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 20px; content: ''; background-image: url(../img/checkmark.png); background-size: 15px; background-position: center; height: 25px; background-repeat: no-repeat; }
+.cbre-case-study-results-list .cbre-case-study-results-item:last-child { border-bottom: 0; }
+.cbre-case-study-image { margin-bottom: -10em !important; }
+#content_editor .cbre-case-study-meta-box, .pdf-page-content .cbre-case-study-meta-box { padding-top: 11em !important; }
+#content_editor .cbre-case-study-meta-box p, .pdf-page-content .cbre-case-study-meta-box p { font-size: 0.8em !important; line-height: 1.4 !important; }
+.cbre-case-study-meta-box hr { color: #fff; border-color: #fff; margin-top: 1em !important; margin-bottom: 1em !important; }
+.cbre-case-study-meta-box .cbre-blockquote-quote { position: relative; font-size: 1.1em !important; line-height: 1.4 !important; }
+.cbre-case-study-meta-box .cbre-blockquote-quote:before, .cbre-case-study-meta-box .cbre-blockquote-quote:after { content: '"'; position: absolute; color: #fff !important; font-size: 1.6em !important; line-height: 1 !important; font-style: italic; }
+.cbre-case-study-meta-box .cbre-blockquote-quote:before { top: -0.1em; left: -0.5em; }
+.cbre-case-study-meta-box .cbre-blockquote-quote:after { position: absolute; bottom: 0em; }
 .cbre-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
 .cbre-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
 .cbre-pad-t { padding-top: 30px !important; }
@@ -92,4 +117,4 @@ GITHUB REPO: https://github.com/danieljbell/client-theme-template
 .cbre-mar-l-more { margin-left: 60px !important; }
 .cbre-mar-r { margin-right: 30px !important; }
 .cbre-mar-r-more { margin-right: 60px !important; }
-@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half { padding: 0 !important; } .cbre-vertical-align { display: block; } .cbre-professional-profile { margin-top: 60px; } .cbre-transition-custom-image { position: relative; right: auto; top: auto; max-width: 100% !important; } .cbre-property-transition-container .grid .one-third { margin-bottom: 1.5em !important; } .cbre-property-transition-container .grid .one-third:first-child li { margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0 !important; margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 0 !important; } .cbre-advantage-visual { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; } .cbre-advantage-visual:after { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 150%; max-width: 300px; } .cbre-advantage-visual li { margin-bottom: 30px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
+@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .one-third, .pdf-page-content .no-gutters .one-third, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 !important; } #content_editor .pull-right, .pdf-page-content .pull-right { float: none; padding-left: 0 !important; padding-right: 0 !important; } .cbre-vertical-align { display: block; } .cbre-professional-profile { margin-top: 60px; } .cbre-transition-custom-image { position: relative; right: auto; top: auto; max-width: 100% !important; } .cbre-property-transition-container .grid .one-third { margin-bottom: 1.5em !important; } .cbre-property-transition-container .grid .one-third:first-child li { margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0 !important; margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 0 !important; } .cbre-advantage-visual { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; } .cbre-advantage-visual:after { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 150%; max-width: 300px; } .cbre-advantage-visual li { margin-bottom: 30px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
