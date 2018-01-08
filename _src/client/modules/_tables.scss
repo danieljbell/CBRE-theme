@@ -1,0 +1,31 @@
+.cbre-table {
+  font-size: 0.85em !important;
+  line-height: 1.4 !important;
+  
+  tfoot {
+    color: #fff;
+    background-color: $brand;
+  }
+
+  &.cbre-fee-structure {
+    
+    th {
+      text-align: center !important;
+    }
+
+    th:first-child {
+      text-align: left !important;
+    }
+    
+    td {
+      text-align: center;
+      
+      &:first-child {
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}

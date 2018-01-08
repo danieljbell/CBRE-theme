@@ -1,0 +1,77 @@
+.cbre-pulse-container {
+
+  blockquote {
+    @media screen and (min-width: 735px) {
+      margin-left: 105px;
+      max-width: 55%;
+    }
+  }
+
+}
+
+.cbre-pulse-icon-list {
+  list-style-type: none;
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+  p {
+    margin-bottom: 0 !important;
+    color: #fff !important;
+  }
+
+  h4 {
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 300 !important;
+  }
+
+  .cbre-pulse-icon-item {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 735px) {
+      align-items: initial;
+    }
+    // OVERRIDING DEFAULT LIST ITEM MARGIN
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .cbre-pulse-icon {
+    background-color: $brand;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 50px;
+      max-height: 50px;
+    }
+
+  }
+
+  .cbre-pulse-content {
+    background-color: transparentize(#fff, 0.7);
+    padding: 1em 2em !important;
+    width: 100%;
+  }
+
+  li:first-child .cbre-pulse-content {
+    padding-top: 2em !important;
+  }
+
+  li:last-child .cbre-pulse-content {
+    padding-bottom: 2em !important;
+  }
+
+}

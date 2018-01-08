@@ -27,7 +27,12 @@ gulp.task('css', function () {
     .pipe(gulp.dest('./css'))
     .pipe(gulp.dest('_site/css'))
     .pipe(browserSync.stream());
-  gulp.src(['_src/client/_client_variables.scss', '_src/client/client-theme.scss'])
+  gulp.src([
+    '_src/client/_client_variables.scss',
+    '_src/client/client-theme.scss',
+    '_src/client/modules/*.scss',
+    '_src/client/pages/*.scss'
+  ])
     .pipe(sass({outputStyle: 'compact'}).on('error', sass.logError))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./_includes'))

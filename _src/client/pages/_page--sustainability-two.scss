@@ -1,0 +1,97 @@
+.cbre-case-study-results-list {
+  list-style-type: none;
+  margin-bottom: 1em !important;
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+  .cbre-case-study-results-item {
+    font-size: 0.9em !important;
+    line-height: 1.4 !important;
+    position: relative;
+    border-bottom: 1px solid #BCBEC0;
+    padding-left: 40px !important;
+    padding-bottom: 1em !important;
+    padding-top: 1em !important;
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0 !important;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      width: 20px;
+      content: '';
+      background-image: url(../img/checkmark.png);
+      background-size: 15px;
+      background-position: center;
+      height: 25px;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+  }
+
+}
+
+.cbre-case-study-image {
+  margin-bottom: -10em !important;
+}
+
+.cbre-case-study-meta-box {
+  
+  #content_editor &,
+  .pdf-page-content & {
+    padding-top: 11em !important;
+  }
+
+  p {
+    #content_editor &,
+    .pdf-page-content & {
+      font-size: 0.8em !important;
+      line-height: 1.4 !important;
+    }
+  }
+
+  hr {
+    color: #fff;
+    border-color: #fff;
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
+  }
+
+  .cbre-blockquote-quote {
+    position: relative;
+    font-size: 1.1em !important;
+    line-height: 1.4 !important;
+    
+    &:before,
+    &:after {
+      content: '"';
+      position: absolute;
+      color: #fff !important;
+      font-size: 1.6em !important;
+      line-height: 1 !important;
+      font-style: italic;
+    }
+
+    &:before {
+      top: -0.1em;
+      left: -0.5em;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0em;
+    }
+
+  }
+
+}

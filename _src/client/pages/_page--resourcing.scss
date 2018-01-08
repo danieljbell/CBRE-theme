@@ -1,0 +1,124 @@
+.cbre-resourcing-team {
+  background-color: $brand !important;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -90px;
+  @media screen and (max-width: 735px) {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-bottom: -60px;
+  }
+  
+  .cbre-brand-three-box {
+    position: relative;
+    z-index: 1;
+  }
+
+  h2 {
+    margin-bottom: 1em !important;
+  }
+
+}
+
+.cbre-resourcing-level-one-item,
+.cbre-resourcing-level-two-item {
+  background-color: $brand-three;
+  padding: 10px;
+  position: relative;
+  border: 1px solid #fff;
+  font-size: 0.8em !important;
+  line-height: 1.4 !important;
+
+
+
+  &:before {
+    position: absolute;
+    content: '';
+    border-left: 2px solid #fff;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    @media screen and (max-width: 735px) {
+      left: -10%;
+      bottom: 50%;
+      height: 100px;
+      transform: translateX(0%);
+    }
+  }
+
+  &:after {
+    @media screen and (max-width: 735px) {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      border-top: 2px solid #fff;
+      width: 100px;
+      left: -10%;
+      top: 50%;
+      transform: translateY(-50%); 
+    }
+  }
+
+}
+
+.cbre-resourcing-level-one-list,
+.cbre-resourcing-level-two-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+  #content_editor & li,
+  .pdf-page-content & li {
+    margin-bottom: 30px !important;
+  }
+
+}
+
+.cbre-resourcing-level-one-list {
+
+  .cbre-resourcing-level-one-item {
+    flex-basis: 20%;
+    &:last-child:before {
+      @media screen and (min-width: 735px) {
+        height: 200px;
+      }
+    }
+    @media screen and (max-width: 735px) {
+      flex-basis: 85%;
+      margin-left: 15%;
+    }
+  }
+  
+  .cbre-resourcing-level-one-item:last-child {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 30px;
+    background-color: lighten($brand, 10%);
+  }
+
+}
+
+.cbre-resourcing-level-two-list {
+  justify-content: space-around;
+  position: relative;
+  z-index: -1;
+  @media screen and (max-width: 735px) {
+    margin-left: calc(25% + 10px);
+  }
+  
+  .cbre-resourcing-level-two-item {
+    background-color: lighten($brand, 10%);
+    flex-basis: 35%;
+    @media screen and (max-width: 735px) {
+      flex-basis: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+.cbre-title-bar {
+  background-color: $brand;
+  position: relative;
+  left: -30px;
+  top: -20px;
+  width: calc(100% + 60px);
+  padding: 30px 30px 20px;
+  h1 {
+    color: #fff !important;
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+  }
+}

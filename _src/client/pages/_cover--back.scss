@@ -1,0 +1,85 @@
+.cbre-back-cover {
+
+  .cbre-brand-box {
+    position: relative;
+    left: -30px;
+    max-width: 70%;
+    @media screen and (max-width: 568px) {
+      max-width: initial;
+      width: calc(100% + 60px);
+    }
+
+    h1 {
+      margin-bottom: 0.5em !important;
+    }
+
+    p {
+      font-size: 0.8em !important;
+      line-height: 1.4 !important;
+    }
+
+  }
+
+  .align-center {
+    @media screen and (max-width: 568px) {
+      margin-top: 1em !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    } 
+  }
+
+}
+
+.cbre-conclusion-page .cbre-pad-x-more {
+  @media screen and (max-width: 735px) {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+
+.cbre-conclusion-page .cbre-pad-y-more {
+  @media screen and (max-width: 735px) {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+}
+
+.cbre-conclusion-page .cbre-mar-x-more {
+  @media screen and (max-width: 735px) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+
+.cbre-conclusion-page .cbre-headshot {
+  @media screen and (max-width: 735px) {
+    #content_editor &,
+    .pdf-page-content & {
+      max-width: 65px !important;
+    }
+  }
+}
+
+#content_editor .cbre-back-cover .align-center p,
+.pdf-page-content .cbre-back-cover .align-center p {
+  font-size: 0.7em !important;
+  line-height: 1.4 !important;
+}
+
+.cbre-back-cover-logo-container {
+  min-height: 400px;
+  position: relative;
+  @media screen and (max-width: 568px) {
+    min-height: 200px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 350px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}

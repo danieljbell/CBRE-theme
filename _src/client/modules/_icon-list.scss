@@ -1,0 +1,33 @@
+.cbre-icon-list {
+  list-style-type: none;
+  padding-top: 0.5em;
+  
+  li {
+    display: table;
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 1.25em !important;
+    }
+  }
+  
+  .cbre-icon-list-icon,
+  .cbre-icon-list-content {
+    display: table-cell; 
+    vertical-align: middle;
+  }
+  
+  .cbre-icon-list-icon {
+    padding-right: 1em !important;
+    
+    img {
+      max-width: 1.75em !important;
+    }
+
+  }
+  
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+}

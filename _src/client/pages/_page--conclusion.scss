@@ -1,0 +1,30 @@
+.cbre-conclusion-people-list {
+  list-style-type: none;
+  
+  #content_editor &,
+  .pdf-page-content & {
+    padding-left: 0 !important;
+  }
+
+  .cbre-conclusion-people-item {
+    display: table;
+  }
+
+  .cbre-conclusion-people-content,
+  .cbre-conclusion-people-headshot {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .cbre-conclusion-people-content {
+    color: $base-text-color !important;
+    padding-left: 1em !important;
+
+    p {
+      color: $base-text-color !important;      
+      margin-bottom: 0 !important;
+    }
+
+  }
+
+}

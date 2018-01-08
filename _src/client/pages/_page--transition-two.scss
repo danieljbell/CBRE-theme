@@ -1,0 +1,98 @@
+.cbre-transition-custom-image {
+  position: absolute;
+  right: -30px;
+  top: 100%;
+  max-width: 350px !important;
+  width: 100%;
+  @media screen and (max-width: 568px) {
+    position: relative;
+    right: auto;
+    top: auto;
+    max-width: 100% !important;
+  }
+}
+
+.cbre-property-transition-container {
+  
+  .grid .one-third {
+    @media screen and (max-width: 568px) {
+      margin-bottom: 1.5em !important;
+    }
+  
+    &:first-child li {
+      margin-right: 1.3334em !important;
+      @media screen and (max-width: 568px) {
+        margin-right: 0 !important;
+      }
+    }
+
+    &:nth-child(2) li {
+      margin-left: 0.6667em !important;
+      margin-right: 0.6667em !important;
+      @media screen and (max-width: 568px) {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+
+    &:nth-child(3) li {
+      margin-left: 1.3334em !important;
+      @media screen and (max-width: 568px) {
+        margin-left: 0 !important;
+      }
+    }
+
+  }
+
+  h2 {
+    margin-bottom: 1em !important;
+  }
+
+  h3 {
+    font-weight: 300 !important;
+    text-transform: uppercase;
+    text-align: center;
+    color: $brand-three !important;
+    border-top: 2px solid $brand-three;
+    border-bottom: 2px solid $brand-three;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  ul {
+    list-style-type: none !important;
+    // THIS IS TO OVERRIDE DEFAULT STYLES
+    #content_editor &,
+    .pdf-page-content & {
+      padding-left: 0 !important;  
+    }
+  }
+
+  li {
+    font-size: 0.7em !important;
+    background-color: $brand;
+    color: #fff !important;
+    padding: 1em 1em 1em 35px !important;
+    border-bottom: 1px solid $brand-three;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 15px;
+      height: 15px;
+      transform: translateY(-50%);
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+  }
+
+}

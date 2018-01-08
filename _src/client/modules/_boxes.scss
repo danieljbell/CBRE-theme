@@ -1,0 +1,23 @@
+.cbre-brand-box {
+  background-color: transparentize($brand, 0.1);
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    color: #fff !important;
+  }
+}
+
+.cbre-brand-three-box {
+  background-color: $brand-three;
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    color: #fff !important;
+  }
+}
+
+.cbre-white-box {
+  background-color: transparentize(#fff, 0.6);
+  color: #fff !important;
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    color: #fff !important;
+  }
+}

@@ -1,0 +1,26 @@
+// =================
+// CUSTOM FULL PAGES
+// =================
+
+// BASE STYLES
+.cbre-full-page {
+  position: relative;
+  left: -30px;
+  top: -20px;
+  width: calc(100% + 60px);
+  // min-height: 800px;
+  padding: 20px 30px;
+  margin-bottom: -40px;
+  background-size: cover;
+  background-position: center;
+}
+
+// FULL WIDTH CONTAINER 
+.cbre-full-width {
+  position: relative;
+  left: -30px;
+  width: calc(100% + 60px);
+  img {
+    width: 100%;
+  }
+}
