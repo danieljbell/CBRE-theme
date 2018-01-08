@@ -5,6 +5,13 @@
   top: -20px;
   width: calc(100% + 60px);
   padding: 30px 30px 20px;
+  @media print {
+    left: -1in;
+    top: -1in;
+    width: 8.5in;
+    padding-left: 1in;
+    padding-right: 1in;
+  }
   h1 {
     color: #fff !important;
     margin-top: 20px !important;

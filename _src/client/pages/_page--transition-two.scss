@@ -76,6 +76,10 @@
     padding: 1em 1em 1em 35px !important;
     border-bottom: 1px solid $brand-three;
     position: relative;
+    #content_editor &,
+    .pdf-page-content & {
+      margin-bottom: 0 !important;
+    }
 
     &:before {
       content: '';
