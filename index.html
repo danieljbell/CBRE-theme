@@ -1,18 +1,184 @@
----
-title: Client Theme
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{site.title}}</title>
+  <title>CBRE</title>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/theme-builder.css">
   <style id="client-theme">
-{% include client-theme.css %}
+/*
+=================================================================
+GITHUB REPO: https://github.com/danieljbell/client-theme-template
+=================================================================
+*/
+#content_editor h1, .pdf-page-content h1 { text-transform: uppercase; }
+#content_editor h2, .pdf-page-content h2 { text-transform: uppercase; font-family: "Futura PT"; }
+#content_editor blockquote, .pdf-page-content blockquote { color: #6BBE45; font-size: 1.25em !important; font-family: "Futura PT"; }
+#content_editor ul, .pdf-page-content ul { padding-left: 1em !important; }
+#content_editor ul li, .pdf-page-content ul li { margin-bottom: 0.5em !important; }
+#content_editor table, .pdf-page-content table { margin-bottom: 1em; }
+#content_editor table th, .pdf-page-content table th { text-align: left; }
+#content_editor table th, #content_editor table tfoot td, .pdf-page-content table th, .pdf-page-content table tfoot td { text-transform: uppercase; font-weight: 700; }
+#content_editor table tr:nth-child(2n), .pdf-page-content table tr:nth-child(2n) { background-color: #BCBEC0; }
+#content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 30px !important; }
+#content_editor .no-gutters .half:nth-child(2n-1), .pdf-page-content .no-gutters .half:nth-child(2n-1), #content_editor .no-gutters .two-thirds:nth-child(2n-1), .pdf-page-content .no-gutters .two-thirds:nth-child(2n-1) { padding-left: 0 !important; }
+#content_editor .no-gutters .half:nth-child(2n), .pdf-page-content .no-gutters .half:nth-child(2n), #content_editor .no-gutters .two-thirds:nth-child(2n), .pdf-page-content .no-gutters .two-thirds:nth-child(2n) { padding-right: 0 !important; }
+.cbre-vertical-align { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.cbre-full-page { position: relative; left: -30px; top: -20px; width: calc(100% + 60px); padding: 20px 30px; margin-bottom: -40px; background-size: cover; background-position: center; }
+.cbre-full-width { position: relative; left: -30px; width: calc(100% + 60px); }
+.cbre-full-width img { width: 100%; }
+.cbre-cover-page { background-image: url(../img/cover-page-bg.jpg); text-align: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: end; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
+.cbre-cover-page h1, .cbre-cover-page h2, .cbre-cover-page p { color: #fff !important; }
+.cbre-cover-page-content-container { background-color: rgba(0, 107, 78, 0.9); padding: 30px; margin-left: 60px; margin-right: 60px; margin-bottom: 2em; }
+.cbre-cover-page-logo-container { background-color: rgba(0, 107, 78, 0.9); margin-bottom: 2em; position: relative; left: -30px; width: calc(100% + 60px); }
+.cbre-cover-page-logo-container img { display: block; margin: 0 auto; padding: 1em; max-width: 150px !important; }
+.cbre-resourcing-team { background-color: #006B4E !important; position: relative; z-index: 2; margin-bottom: -90px; }
+.cbre-resourcing-team .cbre-brand-three-box { position: relative; z-index: 1; }
+.cbre-resourcing-team h2 { margin-bottom: 1em !important; }
+.cbre-resourcing-level-one-item, .cbre-resourcing-level-two-item { background-color: #6BBE45; padding: 10px; position: relative; border: 1px solid #fff; font-size: 0.8em !important; line-height: 1.4 !important; }
+.cbre-resourcing-level-one-item:before, .cbre-resourcing-level-two-item:before { position: absolute; content: ''; border-left: 2px solid #fff; bottom: 100%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); height: 30px; }
+.cbre-resourcing-level-one-list, .cbre-resourcing-level-two-list { list-style-type: none; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+#content_editor .cbre-resourcing-level-one-list, .pdf-page-content .cbre-resourcing-level-one-list, #content_editor .cbre-resourcing-level-two-list, .pdf-page-content .cbre-resourcing-level-two-list { padding-left: 0 !important; }
+#content_editor .cbre-resourcing-level-one-list li, .pdf-page-content .cbre-resourcing-level-one-list li, #content_editor .cbre-resourcing-level-two-list li, .pdf-page-content .cbre-resourcing-level-two-list li { margin-bottom: 30px !important; }
+.cbre-resourcing-level-one-list .cbre-resourcing-level-one-item { -webkit-flex-basis: 20%; -ms-flex-preferred-size: 20%; flex-basis: 20%; }
+.cbre-resourcing-level-one-list .cbre-resourcing-level-one-item:last-child { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; width: 100%; padding: 30px; background-color: #009e73; }
+.cbre-resourcing-level-two-list { -webkit-justify-content: space-around; -ms-flex-pack: distribute; justify-content: space-around; position: relative; z-index: -1; }
+.cbre-resourcing-level-two-list .cbre-resourcing-level-two-item { background-color: #009e73; -webkit-flex-basis: 35%; -ms-flex-preferred-size: 35%; flex-basis: 35%; }
+.cbre-transition-visual ul { list-style-type: none; }
+#content_editor .cbre-transition-visual ul, .pdf-page-content .cbre-transition-visual ul { padding-left: 0 !important; }
+.cbre-transition-visual .cbre-headshot { border-color: #6BBE45; position: relative; z-index: 1; }
+.cbre-transition-visual .cbre-headshot-content { background-color: #6BBE45; color: #fff; text-align: center; padding: 1em; margin-left: 1em; }
+.cbre-transition-visual .cbre-transition-visual-top-level-item { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; position: relative; }
+.cbre-transition-visual .cbre-transition-visual-top-level-item:after { content: ''; position: absolute; top: 100%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); border-left: 2px solid #6BBE45; height: 30px; }
+.cbre-transition-visual .cbre-transition-visual-nested-list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; margin-top: 60px; position: relative; }
+.cbre-transition-visual .cbre-transition-visual-nested-list:before { content: ''; position: absolute; left: 1em; right: 1em; top: -30px; border-bottom: 2px solid #6BBE45; width: calc(100% - 2.1em); }
+.cbre-transition-visual .cbre-transition-visual-nested-list li { text-align: center; padding: 0.5em; font-size: 0.8em !important; line-height: 1.2 !important; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; border: 1px solid #6BBE45; margin: 0 1em; position: relative; }
+.cbre-transition-visual .cbre-transition-visual-nested-list li:first-child:before, .cbre-transition-visual .cbre-transition-visual-nested-list li:last-child:before { content: ''; position: absolute; width: 1px; height: 30px; bottom: calc(100% + 15px); }
+.cbre-transition-visual .cbre-transition-visual-nested-list li:first-child:before { border-left: 2px solid #6BBE45; left: 0; }
+.cbre-transition-visual .cbre-transition-visual-nested-list li:last-child:before { border-right: 2px solid #6BBE45; right: 0; }
+.cbre-brand-box { background-color: rgba(0, 107, 78, 0.9); color: #fff !important; }
+.cbre-brand-box h1, .cbre-brand-box h2, .cbre-brand-box h3, .cbre-brand-box h4, .cbre-brand-box h5, .cbre-brand-box h6, .cbre-brand-box p, .cbre-brand-box ul, .cbre-brand-box ol, .cbre-brand-box li { color: #fff !important; }
+.cbre-brand-three-box { background-color: #6BBE45; color: #fff !important; }
+.cbre-brand-three-box h1, .cbre-brand-three-box h2, .cbre-brand-three-box h3, .cbre-brand-three-box h4, .cbre-brand-three-box h5, .cbre-brand-three-box h6, .cbre-brand-three-box p, .cbre-brand-three-box ul, .cbre-brand-three-box ol, .cbre-brand-three-box li { color: #fff !important; }
+.cbre-white-box { background-color: rgba(255, 255, 255, 0.4); color: #fff !important; }
+.cbre-white-box h1, .cbre-white-box h2, .cbre-white-box h3, .cbre-white-box h4, .cbre-white-box h5, .cbre-white-box h6, .cbre-white-box p, .cbre-white-box ul, .cbre-white-box ol, .cbre-white-box li { color: #fff !important; }
+.cbre-title-bar { background-color: #006B4E; position: relative; left: -30px; top: -20px; width: calc(100% + 60px); padding: 30px 30px 20px; }
+.cbre-title-bar h1 { color: #fff !important; margin-top: 20px !important; margin-bottom: 0 !important; }
+.cbre-has-text-white { color: #fff !important; }
+.cbre-has-text-brand-two { color: #E01F26 !important; }
+.cbre-headshot-container { text-align: center !important; }
+.cbre-headshot { border-radius: 50%; border: 2px solid #fff; }
+.cbre-headshot-name { text-align: center !important; font-size: 0.85em !important; }
+.cbre-heading-has-icon { display: table; }
+.cbre-heading-has-icon .cbre-heading-icon, .cbre-heading-has-icon .cbre-heading-content { display: table-cell; vertical-align: middle; }
+.cbre-heading-icon { max-width: 35px !important; max-height: 35px !important; margin-right: 0.5em !important; }
+.cbre-professional-profile { position: relative; margin-top: 30px; }
+.cbre-professional-profile:before { content: ''; position: absolute; left: 15px; top: 15px; width: 75px; height: 75px; border-top: 2px solid white; border-left: 2px solid white; }
+.cbre-professional-profile .cbre-headshot { position: absolute; top: -40px; right: -5px; }
+.cbre-professional-profile .cbre-professional-profile-name, .cbre-professional-profile .cbre-professional-profile-title { margin-bottom: 0 !important; }
+.cbre-transition-custom-image { position: absolute; right: -30px; top: 100%; max-width: 350px !important; width: 100%; }
+.cbre-property-transition-container .grid .one-third:first-child li { margin-right: 1.3334em !important; }
+.cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0.6667em !important; margin-right: 0.6667em !important; }
+.cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 1.3334em !important; }
+.cbre-property-transition-container h2 { margin-bottom: 1em !important; }
+.cbre-property-transition-container h3 { font-weight: 300 !important; text-transform: uppercase; text-align: center; color: #6BBE45 !important; border-top: 2px solid #6BBE45; border-bottom: 2px solid #6BBE45; padding-top: 10px !important; padding-bottom: 10px !important; margin-bottom: 0 !important; }
+.cbre-property-transition-container ul { list-style-type: none !important; }
+#content_editor .cbre-property-transition-container ul, .pdf-page-content .cbre-property-transition-container ul { padding-left: 0 !important; }
+.cbre-property-transition-container li { font-size: 0.7em !important; background-color: #006B4E; color: #fff !important; padding: 1em 1em 1em 35px !important; border-bottom: 1px solid #6BBE45; position: relative; }
+.cbre-property-transition-container li:before { content: ''; position: absolute; top: 50%; left: 10px; width: 15px; height: 15px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); border: 2px solid #fff; border-radius: 50%; }
+.cbre-property-transition-container li:last-child { border-bottom: 0; }
+.cbre-advantage-visual { margin-top: 20px; list-style-type: none; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; position: relative; z-index: 1; }
+#content_editor .cbre-advantage-visual, .pdf-page-content .cbre-advantage-visual { padding-left: 0 !important; }
+.cbre-advantage-visual:after { content: ''; position: absolute; z-index: -1; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 100%; height: 1px; border-top: 3px dashed #00946c; }
+.cbre-advantage-visual li { text-align: center; padding: 1.5em !important; font-size: 0.75em !important; line-height: 1.5 !important; color: #fff !important; width: 200px; height: 200px; background-color: #00946c; border-radius: 50%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.cbre-pulse-icon-list { list-style-type: none; }
+#content_editor .cbre-pulse-icon-list, .pdf-page-content .cbre-pulse-icon-list { padding-left: 0 !important; }
+.cbre-pulse-icon-list p { margin-bottom: 0 !important; color: #fff !important; }
+.cbre-pulse-icon-list h4 { color: #fff !important; text-transform: uppercase; font-weight: 300 !important; }
+.cbre-pulse-icon-list .cbre-pulse-icon-item { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+#content_editor .cbre-pulse-icon-list .cbre-pulse-icon-item, .pdf-page-content .cbre-pulse-icon-list .cbre-pulse-icon-item { margin-bottom: 0 !important; }
+.cbre-pulse-icon-list .cbre-pulse-icon { background-color: #006B4E; width: 75px; height: 75px; border-radius: 50%; position: relative; -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; margin-right: 30px; }
+.cbre-pulse-icon-list .cbre-pulse-icon img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); max-width: 50px; max-height: 50px; }
+.cbre-pulse-icon-list .cbre-pulse-content { background-color: rgba(255, 255, 255, 0.3); padding: 1em 2em !important; width: 100%; }
+.cbre-pulse-icon-list li:first-child .cbre-pulse-content { padding-top: 2em !important; }
+.cbre-pulse-icon-list li:last-child .cbre-pulse-content { padding-bottom: 2em !important; }
+.cbre-contractor-induction-list { list-style-type: none; margin-top: 30px; }
+.cbre-contractor-induction-list .cbre-contractor-induction-item { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.cbre-contractor-induction-list .cbre-contractor-induction-icon { -webkit-flex-shrink: 0; -ms-flex-negative: 0; flex-shrink: 0; margin-right: 10px; }
+.cbre-contractor-induction-list .cbre-contractor-induction-content { font-size: 0.85em !important; line-height: 1.4 !important; }
+.cbre-icon-list { list-style-type: none; padding-top: 0.5em; }
+.cbre-icon-list li { display: table; }
+#content_editor .cbre-icon-list li, .pdf-page-content .cbre-icon-list li { margin-bottom: 1.25em !important; }
+.cbre-icon-list .cbre-icon-list-icon, .cbre-icon-list .cbre-icon-list-content { display: table-cell; vertical-align: middle; }
+.cbre-icon-list .cbre-icon-list-icon { padding-right: 1em !important; }
+.cbre-icon-list .cbre-icon-list-icon img { max-width: 1.75em !important; }
+#content_editor .cbre-icon-list, .pdf-page-content .cbre-icon-list { padding-left: 0 !important; }
+.cbre-case-study-results-list { list-style-type: none; margin-bottom: 1em !important; }
+#content_editor .cbre-case-study-results-list, .pdf-page-content .cbre-case-study-results-list { padding-left: 0 !important; }
+.cbre-case-study-results-list .cbre-case-study-results-item { font-size: 0.9em !important; line-height: 1.4 !important; position: relative; border-bottom: 1px solid #BCBEC0; padding-left: 40px !important; padding-bottom: 1em !important; padding-top: 1em !important; }
+#content_editor .cbre-case-study-results-list .cbre-case-study-results-item, .pdf-page-content .cbre-case-study-results-list .cbre-case-study-results-item { margin-bottom: 0 !important; }
+.cbre-case-study-results-list .cbre-case-study-results-item:before { position: absolute; top: 50%; left: 0px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 20px; content: ''; background-image: url(../img/checkmark.png); background-size: 15px; background-position: center; height: 25px; background-repeat: no-repeat; }
+.cbre-case-study-results-list .cbre-case-study-results-item:last-child { border-bottom: 0; }
+.cbre-case-study-image { margin-bottom: -10em !important; }
+#content_editor .cbre-case-study-meta-box, .pdf-page-content .cbre-case-study-meta-box { padding-top: 11em !important; }
+#content_editor .cbre-case-study-meta-box p, .pdf-page-content .cbre-case-study-meta-box p { font-size: 0.8em !important; line-height: 1.4 !important; }
+.cbre-case-study-meta-box hr { color: #fff; border-color: #fff; margin-top: 1em !important; margin-bottom: 1em !important; }
+.cbre-case-study-meta-box .cbre-blockquote-quote { position: relative; font-size: 1.1em !important; line-height: 1.4 !important; }
+.cbre-case-study-meta-box .cbre-blockquote-quote:before, .cbre-case-study-meta-box .cbre-blockquote-quote:after { content: '"'; position: absolute; color: #fff !important; font-size: 1.6em !important; line-height: 1 !important; font-style: italic; }
+.cbre-case-study-meta-box .cbre-blockquote-quote:before { top: -0.1em; left: -0.5em; }
+.cbre-case-study-meta-box .cbre-blockquote-quote:after { position: absolute; bottom: 0em; }
+.cbre-table { font-size: 0.85em !important; line-height: 1.4 !important; }
+.cbre-table tfoot { color: #fff; background-color: #006B4E; }
+.cbre-table.cbre-fee-structure th { text-align: center !important; }
+.cbre-table.cbre-fee-structure th:first-child { text-align: left !important; }
+.cbre-table.cbre-fee-structure td { text-align: center; }
+.cbre-table.cbre-fee-structure td:first-child { text-align: left; }
+.cbre-conclusion-people-list { list-style-type: none; }
+#content_editor .cbre-conclusion-people-list, .pdf-page-content .cbre-conclusion-people-list { padding-left: 0 !important; }
+.cbre-conclusion-people-list .cbre-conclusion-people-item { display: table; }
+.cbre-conclusion-people-list .cbre-conclusion-people-content, .cbre-conclusion-people-list .cbre-conclusion-people-headshot { display: table-cell; vertical-align: middle; }
+.cbre-conclusion-people-list .cbre-conclusion-people-content { color: #58595B !important; padding-left: 1em !important; }
+.cbre-conclusion-people-list .cbre-conclusion-people-content p { color: #58595B !important; margin-bottom: 0 !important; }
+.cbre-back-cover .cbre-brand-box { position: relative; left: -30px; max-width: 70%; }
+.cbre-back-cover .cbre-brand-box h1 { margin-bottom: 0.5em !important; }
+.cbre-back-cover .cbre-brand-box p { font-size: 0.8em !important; line-height: 1.4 !important; }
+#content_editor .cbre-back-cover .align-center p, .pdf-page-content .cbre-back-cover .align-center p { font-size: 0.7em !important; line-height: 1.4 !important; }
+.cbre-back-cover-logo-container { min-height: 400px; position: relative; }
+.cbre-back-cover-logo-container img { width: 100%; max-width: 350px !important; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.cbre-pad-y { padding-top: 30px !important; padding-bottom: 30px !important; }
+.cbre-pad-y-more { padding-top: 60px !important; padding-bottom: 60px !important; }
+.cbre-pad-t { padding-top: 30px !important; }
+.cbre-pad-t-more { padding-top: 60px !important; }
+.cbre-pad-b { padding-bottom: 30px !important; }
+.cbre-pad-b-more { padding-bottom: 60px !important; }
+.cbre-pad-x { padding-left: 30px !important; padding-right: 30px !important; }
+.cbre-pad-x-more { padding-left: 60px !important; padding-right: 60px !important; }
+.cbre-pad-l { padding-left: 30px !important; }
+.cbre-pad-l-more { padding-left: 60px !important; }
+.cbre-pad-r { padding-right: 30px !important; }
+.cbre-pad-r-more { padding-right: 60px !important; }
+.cbre-mar-y { margin-top: 30px !important; margin-bottom: 30px !important; }
+.cbre-mar-y-more { margin-top: 60px !important; margin-bottom: 60px !important; }
+.cbre-mar-t { margin-top: 30px !important; }
+.cbre-mar-t-more { margin-top: 60px !important; }
+.cbre-mar-b { margin-bottom: 30px !important; }
+.cbre-mar-b-more { margin-bottom: 60px !important; }
+.cbre-mar-b-neg { margin-bottom: -30px !important; }
+.cbre-mar-x { margin-left: 30px !important; margin-right: 30px !important; }
+.cbre-mar-x-more { margin-left: 60px !important; margin-right: 60px !important; }
+.cbre-mar-l { margin-left: 30px !important; }
+.cbre-mar-l-more { margin-left: 60px !important; }
+.cbre-mar-r { margin-right: 30px !important; }
+.cbre-mar-r-more { margin-right: 60px !important; }
+.cbre-b-a { border: 1px solid #fff; }
+@media screen and (max-width: 568px) { #content_editor .no-gutters .half, .pdf-page-content .no-gutters .half, #content_editor .no-gutters .two-thirds, .pdf-page-content .no-gutters .two-thirds { padding: 0 !important; } #content_editor .pull-right, .pdf-page-content .pull-right { float: none; padding-left: 0 !important; padding-right: 0 !important; } .cbre-vertical-align { display: block; } .cbre-cover-page .cbre-cover-page-content-container { margin-top: 0 !important; } .cbre-cover-page-content-container { margin-left: 0px; margin-right: 0px; } .cbre-intro-letter .cbre-mar-x-more { margin-left: 0 !important; margin-right: 0 !important; } .cbre-intro-letter .cbre-pad-x-more { padding-left: 30px !important; padding-right: 30px !important; } .cbre-intro-letter .cbre-pad-y-more { padding-top: 30px !important; padding-bottom: 30px !important; } .cbre-professional-profile { margin-top: 60px; } .cbre-transition-custom-image { position: relative; right: auto; top: auto; max-width: 100% !important; } .cbre-property-transition-container .grid .one-third { margin-bottom: 1.5em !important; } .cbre-property-transition-container .grid .one-third:first-child li { margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(2) li { margin-left: 0 !important; margin-right: 0 !important; } .cbre-property-transition-container .grid .one-third:nth-child(3) li { margin-left: 0 !important; } .cbre-advantage-visual { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; } .cbre-advantage-visual:after { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); width: 150%; max-width: 300px; } .cbre-advantage-visual li { margin-bottom: 30px; } .cbre-back-cover .cbre-brand-box { max-width: initial; width: calc(100% + 60px); } .cbre-back-cover .align-center { margin-top: 1em !important; padding-left: 0 !important; padding-right: 0 !important; } .cbre-back-cover-logo-container { min-height: 200px; } .cbre-mar-x { margin-left: 0px !important; margin-right: 0px !important; } }
+@media screen and (max-width: 735px) { .cbre-resourcing-team { padding-left: 30px !important; padding-right: 30px !important; margin-bottom: -60px; } .cbre-resourcing-level-one-item:before, .cbre-resourcing-level-two-item:before { left: -10%; bottom: 50%; height: 100px; -webkit-transform: translateX(0%); -ms-transform: translateX(0%); transform: translateX(0%); } .cbre-resourcing-level-one-item:after, .cbre-resourcing-level-two-item:after { content: ''; position: absolute; z-index: -1; border-top: 2px solid #fff; width: 100px; left: -10%; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); } .cbre-resourcing-level-one-list .cbre-resourcing-level-one-item { -webkit-flex-basis: 85%; -ms-flex-preferred-size: 85%; flex-basis: 85%; margin-left: 15%; } .cbre-resourcing-level-two-list { margin-left: calc(25% + 10px); } .cbre-resourcing-level-two-list .cbre-resourcing-level-two-item { -webkit-flex-basis: 100%; -ms-flex-preferred-size: 100%; flex-basis: 100%; } .cbre-transition-visual .cbre-headshot-content { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; text-align: left; } .cbre-transition-visual .cbre-transition-visual-top-level-item { -webkit-box-pack: initial; -webkit-justify-content: initial; -ms-flex-pack: initial; justify-content: initial; } .cbre-transition-visual .cbre-transition-visual-top-level-item:after { height: 40px; left: 46px; -webkit-transform: translateX(0); -ms-transform: translateX(0); transform: translateX(0); } .cbre-transition-visual .cbre-transition-visual-nested-list { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; margin-top: 15px; margin-left: 61px; } .cbre-transition-visual .cbre-transition-visual-nested-list:before { display: none; } .cbre-transition-visual .cbre-transition-visual-nested-list li { margin-right: 0; } .cbre-transition-visual .cbre-transition-visual-nested-list li:first-child:before, .cbre-transition-visual .cbre-transition-visual-nested-list li:last-child:before { border-left: 0; border-right: 0; }
+  .cbre-transition-visual .cbre-transition-visual-nested-list li:before { content: ''; width: 30px !important; height: 1px; position: absolute; top: 50%; left: -30px !important; border-top: 2px solid #6BBE45; }
+  .cbre-transition-visual .cbre-transition-visual-nested-list li:after { content: ''; width: 1px; height: 60px; border-left: 2px solid #6BBE45; position: absolute; bottom: 50%; left: -30px; } .cbre-pulse-icon-list .cbre-pulse-icon-item { -webkit-box-align: initial; -webkit-align-items: initial; -ms-flex-align: initial; align-items: initial; } .cbre-conclusion-page .cbre-pad-x-more { padding-left: 30px !important; padding-right: 30px !important; } .cbre-conclusion-page .cbre-pad-y-more { padding-top: 30px !important; padding-bottom: 30px !important; } .cbre-conclusion-page .cbre-mar-x-more { margin-left: 0px !important; margin-right: 0px !important; } #content_editor .cbre-conclusion-page .cbre-headshot, .pdf-page-content .cbre-conclusion-page .cbre-headshot { max-width: 65px !important; } }
+@media screen and (min-width: 735px) { .cbre-resourcing-level-one-list .cbre-resourcing-level-one-item:last-child:before { height: 200px; } .cbre-pulse-container blockquote { margin-left: 105px; max-width: 55%; } }
+
   </style>
 </head>
 <body>
@@ -25,22 +191,987 @@ title: Client Theme
     </button>
     <nav id="navigation">
       <ul>
-        {% for page in site.pages %}
-          <li><a href="#{{page.slug | slice: 3,page.slug.size}}" data-target={{page.slug | slice: 3,page.slug.size}}>{{page.title | slice: 3,page.title.size}}</a></li>
-        {% endfor %}
+        
+          <li><a href="#cover-page" data-target=cover-page>Cover Page</a></li>
+        
+          <li><a href="#intro-letter" data-target=intro-letter>Intro Letter</a></li>
+        
+          <li><a href="#table-of-contents" data-target=table-of-contents>Table Of Contents</a></li>
+        
+          <li><a href="#resourcing" data-target=resourcing>Resourcing</a></li>
+        
+          <li><a href="#property-management" data-target=property-management>Property Management</a></li>
+        
+          <li><a href="#building-management" data-target=building-management>Building Management</a></li>
+        
+          <li><a href="#CBRE-head-office-support" data-target=CBRE-head-office-support>Cbre Head Office Support</a></li>
+        
+          <li><a href="#professional-profiles" data-target=professional-profiles>Professional Profiles</a></li>
+        
+          <li><a href="#professional-profiles-2" data-target=professional-profiles-2>Professional Profiles 2</a></li>
+        
+          <li><a href="#transition" data-target=transition>Transition</a></li>
+        
+          <li><a href="#transition-2" data-target=transition-2>Transition 2</a></li>
+        
+          <li><a href="#platform-systems" data-target=platform-systems>Platform Systems</a></li>
+        
+          <li><a href="#pulse" data-target=pulse>Pulse</a></li>
+        
+          <li><a href="#contractor-induction-tool" data-target=contractor-induction-tool>Contractor Induction Tool</a></li>
+        
+          <li><a href="#pulse-aspire" data-target=pulse-aspire>Pulse Aspire</a></li>
+        
+          <li><a href="#facilities-management-inspection-app" data-target=facilities-management-inspection-app>Facilities Management Inspection App</a></li>
+        
+          <li><a href="#risk-audit" data-target=risk-audit>Risk Audit</a></li>
+        
+          <li><a href="#sustainability" data-target=sustainability>Sustainability</a></li>
+        
+          <li><a href="#sustainability-2" data-target=sustainability-2>Sustainability 2</a></li>
+        
+          <li><a href="#health-safety-environment-quality-assurance" data-target=health-safety-environment-quality-assurance>Health Safety Environment Quality Assurance</a></li>
+        
+          <li><a href="#health-safety-environment-quality-assurance-2" data-target=health-safety-environment-quality-assurance-2>Health Safety Environment Quality Assurance 2</a></li>
+        
+          <li><a href="#pricing" data-target=pricing>Pricing</a></li>
+        
+          <li><a href="#conclusion" data-target=conclusion>Conclusion</a></li>
+        
+          <li><a href="#back-cover" data-target=back-cover>Back Cover</a></li>
+        
       </ul>
     </nav>
     <button class="tooltipped tooltipped-w" aria-label="Theme CSS Copied!" id="copyCSS" data-clipboard-target="#client-theme">Copy Theme CSS</button>
   </div>
   <div id="content_editor">
-    {% for page in site.pages %}
-      <div class="page page-{{forloop.index}}" id="{{page.slug | slice: 3,page.slug.size}}" data-title="{{page.title | slice: 3,page.title.size}}">
+    
+      <div class="page page-1" id="cover-page" data-title="Cover Page">
         <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
         <div class="page-markup">
-          {{page.content}}
+          <div class="cbre-cover-page cbre-full-page">
+  <div class="cbre-pad-t-more cbre-mar-t-more hide-on-mobiles">
+    <p>&nbsp;</p>
+  </div>
+  <div class="cbre-pad-t-more cbre-mar-t-more">
+    <div class="cbre-cover-page-content-container cbre-pad-t-more cbre-mar-t-more">
+      <h1>Street Name<br>City Name</h1>
+      <h2>Recommendation for Property Management Services</h2>
+      <p>Month Year</p>
+    </div>
+    <div class="cbre-cover-page-logo-container">
+      <img src="../img/cbre-logo--white.png" alt="">
+    </div>
+  </div>
+</div>
         </div>
       </div>
-    {% endfor %}
+    
+      <div class="page page-2" id="intro-letter" data-title="Intro Letter">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-full-page cbre-intro-letter" style="background-image: url(../img/intro-page-bg.jpg);">
+  <div class="cbre-brand-box cbre-pad-x-more cbre-pad-y-more cbre-mar-x-more cbre-mar-y-more">
+    <h1>Thank You</h1>
+    <p>We would like to thank you for the opportunity to partner with <span class="cbre-has-text-brand-two">CLIENT NAME</span> on the transition and management of <span class="cbre-has-text-brand-two">ADDRESS</span>.</p>
+    <p>Our approach to delivering the best possible outcome for  <span class="cbre-has-text-brand-two">CLIENT NAME</span> at <span class="cbre-has-text-brand-two">ADDRESS</span> is to align our objectives with yours.  We have provided a stable, senior management team that will  be supported by an accessible head office management team.</p>
+    <p>We will provide you with full access to our senior leaders to  ensure you benefit from CBRE’s scale in all aspects real estate.</p>
+    <p>The team are well versed in ‘transitioning in’ managements  onto the CBRE platform and will be supported by a dedicated  transition manager mitigating any risk for <span class="cbre-has-text-brand-two">CLIENT NAME</span>. Our  teams work on tight timeframes and will work with you to ensure  that all transition milestones are achieved and expectations  exceeded at every level.</p>
+    <p>We look forward to the opportunity to discuss our proposal and  demonstrate the outcomes we are able to deliver for <span class="cbre-has-text-brand-two">ADDRESS</span>  and <span class="cbre-has-text-brand-two">CLIENT NAME</span>.</p>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-3" id="table-of-contents" data-title="Table Of Contents">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Contents</h1>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-4" id="resourcing" data-title="Resourcing">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Resourcing</h1>
+</div>
+<section class="cbre-pad-y">
+  <h2>Team Structure</h2>
+  <p>Below is a summary of the nominated management team that will be responsible for  managing <span class="cbre-has-text-brand-two">ADDRESS</span>.</p>
+</section>
+<section class="cbre-resourcing-team cbre-brand-box cbre-pad-y cbre-pad-x-more align-center">
+  <h2><span class="cbre-has-text-brand-two">Address</span> Management Team</h2>
+  <div class="cbre-brand-three-box cbre-mar-b cbre-pad-y cbre-b-a">CBRE Head Office Support</div>
+  <ul class="cbre-resourcing-level-one-list">
+    <li class="cbre-resourcing-level-one-item">Technical Services Director - <span class="cbre-has-text-brand-two">First Last</span></li>
+    <li class="cbre-resourcing-level-one-item">Director - <span class="cbre-has-text-brand-two">City</span> <span class="cbre-has-text-brand-two">First Last</span></li>
+    <li class="cbre-resourcing-level-one-item">Director - <span class="cbre-has-text-brand-two">STATE</span> <span class="cbre-has-text-brand-two">First Last</span></li>
+    <li class="cbre-resourcing-level-one-item">Senior Finance Manager - <span class="cbre-has-text-brand-two">First Last</span></li>
+    <li class="cbre-resourcing-level-one-item">Director - Property Manager <span class="cbre-has-text-brand-two">First Last</span></li>
+  </ul>
+  <ul class="cbre-resourcing-level-two-list">
+    <li class="cbre-resourcing-level-two-item">Associate Director - Engineering Manager <span class="cbre-has-text-brand-two">First Last</span></li>
+    <li class="cbre-resourcing-level-two-item">Property Manager <span class="cbre-has-text-brand-two">First Last</span></li>
+  </ul>
+  <ul class="cbre-resourcing-level-two-list">
+    <li class="cbre-resourcing-level-two-item">Building Services Manager <span class="cbre-has-text-brand-two">First Last</span></li>
+    <li class="cbre-resourcing-level-two-item">Finance Manager <span class="cbre-has-text-brand-two">First Last</span></li>
+  </ul>
+</section>
+<section class="cbre-full-width cbre-mar-b-neg" style="position: relative; z-index: 1;">
+  <img src="../img/resourcing.jpg" alt="">
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-5" id="property-management" data-title="Property Management">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-pad-y">
+  <h2>Property Management</h2>
+</div>
+<div class="grid no-gutters">
+  <div class="unit half">
+    <p>Our nominated property management  team consists of <span class="cbre-has-text-brand-two">Name</span>, our City Asset Services Director coupled with  <span class="cbre-has-text-brand-two">Name</span>, Property Manager. A key point  of difference for CBRE’s property  management approach is our ‘buddy’ system consisting of a junior and a senior  property manager as a partnership. Our  experience and track record has proven  this approach to be extremely effective in delivering a high level of service  whilst keeping the management fees to  a competitive level. <span class="cbre-has-text-brand-two">Name</span> will assume  ultimate responsibility for the asset, lead  the initial property transition to ensure  the property is set up and running in  line with CBRE’s global standards, lead  the tenant management, and support  Company in the overall delivery of the asset strategy. <span class="cbre-has-text-brand-two">Name</span> will oversee the lease  administration tasks and minor tenant  requests for the asset.</p>
+  </div>
+  <div class="unit half">
+    <p><span class="cbre-has-text-brand-two">Name</span> joined CBRE in a facility  management capacity and has several  years of experience in this field. <span class="cbre-has-text-brand-two">Name</span>  has been identified as talent within CBRE  and for this reason we are investing  heavily in his development. At the start of  2017, <span class="cbre-has-text-brand-two">Name</span> was appointed to the role  of Property Manager as part of fostering  his development within our <span class="cbre-has-text-brand-two">City</span> property  management team. In the lead-up to this  appointment, <span class="cbre-has-text-brand-two">Name</span> was shadowing a  General Manager at <span class="cbre-has-text-brand-two">Building Name</span>—a major retail shopping centre under CBRE’s  management to gain more exposure to  property management. <span class="cbre-has-text-brand-two">Name</span> has since  been appointed to manage a number of <span class="cbre-has-text-brand-two">Building/Client Name</span> developments  and two small-scale regional large  format retail centres. <span class="cbre-has-text-brand-two">Name</span> has gained  operational experience on a number of  commercial office buildings with CBRE  including <span class="cbre-has-text-brand-two">List Building Names</span>.</p>
+  </div>
+</div>
+<div class="grid no-gutters cbre-mar-y-more">
+  <div class="unit three-fifths">
+    <blockquote>
+      A key point of difference  for CBRE’s property management approach is our ‘buddy’ system consisting of a  junior and a senior property  manager as a partnership.
+    </blockquote>
+  </div>
+  <div class="unit two-fifths">
+    <div class="grid">
+      <div class="unit half">
+        <div class="cbre-headshot-container">
+          <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+          <div class="cbre-headshot-name">First Last</div>
+        </div>
+      </div>
+      <div class="unit half">
+        <div class="cbre-headshot-container">
+          <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+          <div class="cbre-headshot-name">First Last</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cbre-full-width cbre-mar-b-neg">
+  <img src="../img/property-management.jpg" alt="">
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-6" id="building-management" data-title="Building Management">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <section>
+  <div class="cbre-pad-y">
+    <h2>Building Management</h2>
+  </div>
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <p>In the interest of providing a high-level  of building management presence and keeping management expense to a minimum, we are nominating <span class="cbre-has-text-brand-two">Name</span> as the Facility Manager to oversee the operational management of the building. <span class="cbre-has-text-brand-two">Name</span> currently oversees <span class="cbre-has-text-brand-two">Building Name</span> on a 00% allocation of time and we propose that the balance of his time be spent at <span class="cbre-has-text-brand-two">Building Name</span>. There are considerable efficiencies with having a facility manager’s sites located in immediate proximity and this arrangement will have the effect of close to full-time, on-site presence, should a tenant need urgent assistance.</p>
+    </div>
+    <div class="unit half">
+      <p>We are open to discussing the final allocation of facility management presence at <span class="cbre-has-text-brand-two">Building Name</span> to suit the requirements of <span class="cbre-has-text-brand-two">Client Name</span>, including scaling back the allocation after 6 or 12 months once the property has been transitioned and is operating on a ‘business as usual’ basis.</p>
+      <p>Our building management team will implement our PULSE Response Centre— our 24/7 tenant helpdesk and portal— which is fully integrated with our property management platform.</p>
+      <div class="cbre-headshot-container pull-right cbre-pad-l">
+        <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+        <div class="cbre-headshot-name">First Last</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cbre-mar-t-more">
+  <div class="cbre-pad-y">
+    <h2>Engineering Management</h2>
+  </div>
+  <div class="grid no-gutters">
+    <div class="half unit">
+      <p>Our team structure includes the provision of an Engineering Manager on a small allocation of time. This role is designed to provide a cost-effective solution for senior operational oversight of the building. The Engineering Manager will oversee the Building Manager. Additionally, they will drive the more strategic operational management of the building, oversee</p>
+    </div>
+    <div class="half unit">
+      <p>the implementation of risk management strategies, coordinate capital expenditure improvements for the asset, as well as the procurement of all main services for the building. Our experience has proven this model to be effective in achieving cost-effective solutions to operational matters and ultimately leads to better operational outcomes.</p>
+    </div>
+  </div>
+  <div class="grid no-gutters">
+    <div class="half unit align-center">
+      <div class="cbre-headshot-container">
+        <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+        <div class="cbre-headshot-name">First Last</div>
+      </div>
+    </div>
+    <div class="half unit">
+      <p>We have nominated <span class="cbre-has-text-brand-two">Name</span> for the role of Engineering Manager on this building. <span class="cbre-has-text-brand-two">Name</span> has over <span class="cbre-has-text-brand-two">00</span> years of experience in the building management field with <span class="cbre-has-text-brand-two">00</span> years of service at CBRE and he is a source of knowledge for the broader CBRE team on complex operational problems.</p>
+    </div>
+  </div>
+</section>
+
+        </div>
+      </div>
+    
+      <div class="page page-7" id="CBRE-head-office-support" data-title="Cbre Head Office Support">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-full-page" style="background-image: url(../img/office-support-bg.jpg);">
+  <div class="grid no-gutters cbre-mar-y-more cbre-pad-y-more">
+    <div class="unit half cbre-mar-y-more cbre-pad-y-more">
+      <div class="cbre-mar-t-more cbre-pad-t-more">
+        <div class="cbre-pad-y">
+          <h2 class="cbre-mar-t-more cbre-pad-t-more">CBRE Head Office Support</h2>
+        </div>
+        <p class="cbre-has-text-white">The team will be actively supported by the CBRE head office team providing assistance and guidance as required. As our <span class="cbre-has-text-brand-two">City</span> Director, <span class="cbre-has-text-brand-two">Name</span> will also act as the Account Manager for <span class="cbre-has-text-brand-two">Client Name</span>—providing access to senior management within CBRE together with access to the broader CBRE network.</p>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-8" id="professional-profiles" data-title="Professional Profiles">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-full-page" style="background-image: url(../img/professional-profiles-bg.jpg);">
+  <div class="cbre-mar-x">
+    <div class="cbre-pad-y">
+      <h1 class="cbre-has-text-white">Professional Profiles</h1>
+    </div>
+    <div class="grid no-gutters">
+      <div class="unit half">
+        <div class="cbre-brand-box cbre-pad-x cbre-pad-y cbre-professional-profile">
+          <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+          <p class="cbre-professional-profile-name"><span class="cbre-has-text-brand-two">First Last</span></p>
+          <p class="cbre-professional-profile-title">Director - Asset Services,</p>
+          <p class="cbre-professional-profile-city"><span class="cbre-has-text-brand-two">City</span></p>
+          <p><span class="cbre-has-text-brand-two">Name</span> has over <span class="cbre-has-text-brand-two">00</span> years of experience in the property industry and has represented a mixture of private and institutional grade clients throughout his career with a diverse mix of office, industrial and retail property. <span class="cbre-has-text-brand-two">Name</span> Joined CBRE in <span class="cbre-has-text-brand-two">Year</span> and quickly demonstrated a flair for tenant retention. In <span class="cbre-has-text-brand-two">Year Name</span> was appointed to a portfolio leasing role in which <span class="cbre-has-text-brand-two">he/she</span> drove and oversaw considerable leasing activity including some major tenant renewals. <span class="cbre-has-text-brand-two">Name</span> then lead the <span class="cbre-has-text-brand-two">Client Name</span> account between <span class="cbre-has-text-brand-two">Month Year</span> and <span class="cbre-has-text-brand-two">Month Year</span>.</p>
+          <p><span class="cbre-has-text-brand-two">Name</span> now leads the <span class="cbre-has-text-brand-two">City</span> property management team as well as a major national account for CBRE. <span class="cbre-has-text-brand-two">Name</span> will be the lead Property Manager on <span class="cbre-has-text-brand-two">Address</span> and will be supported by <span class="cbre-has-text-brand-two">Name</span>.</p>
+        </div>
+      </div>
+      <div class="unit half">
+        <div class="cbre-brand-box cbre-pad-x cbre-pad-y cbre-professional-profile">
+          <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+          <p class="cbre-professional-profile-name"><span class="cbre-has-text-brand-two">First Last</span></p>
+          <p class="cbre-professional-profile-title">Property Manager</p>
+          <p class="cbre-mar-t">We are pleased to nominate <span class="cbre-has-text-brand-two">Name</span> as the Property Manager for <span class="cbre-has-text-brand-two">Address</span>. <span class="cbre-has-text-brand-two">Name</span> joined CBRE in <span class="cbre-has-text-brand-two">Month Year</span> as a <span class="cbre-has-text-brand-two">Position Title</span>. <span class="cbre-has-text-brand-two">Name</span> was appointed to the position of Property Manager in early in <span class="cbre-has-text-brand-two">Year</span> and has been assigned to a few Property Management assignments including two suburban/regional large format retail shopping centres as well as a number of <span class="cbre-has-text-brand-two">type of</span> developments. <span class="cbre-has-text-brand-two">Name</span> also has operational experience with properties that have heritage listings which places him well to oversee the management of <span class="cbre-has-text-brand-two">Address</span>.</p>
+          <p><span class="cbre-has-text-brand-two">Name</span> is a good communicator and has a strong ability to build and maintain tenant and client relationships. <span class="cbre-has-text-brand-two">He/she</span> is excited to further his career in property  management.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-9" id="professional-profiles-2" data-title="Professional Profiles 2">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-full-page" style="background-image: url(../img/professional-profiles-two-bg.jpg);">
+  <div class="cbre-brand-box cbre-pad-x cbre-pad-y cbre-professional-profile">
+    <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+    <p class="cbre-professional-profile-name"><span class="cbre-has-text-brand-two">First Last</span></p>
+    <p class="cbre-professional-profile-title">Senior Engineering Manager</p>
+    <p class="cbre-mar-t"><span class="cbre-has-text-brand-two">Name</span> commenced with CBRE in <span class="cbre-has-text-brand-two">Year</span> and is an <span class="cbre-has-text-brand-two">Position Title</span> based in our <span class="cbre-has-text-brand-two">City</span> office. <span class="cbre-has-text-brand-two">Name</span> has vast experience in marine engineering as well as serving as <span class="cbre-has-text-brand-two">Chief Engineer of 4 and 5 star hotels</span> where he was responsible for all services. He has also been the Engineering Manager of a landmark CBD complex to complete the commissioning and establishment of services.</p>
+    <p>During <span class="cbre-has-text-brand-two">his/her</span> time at CBRE, <span class="cbre-has-text-brand-two">Name</span> has focused on maximising the operational management through the  implementation of logical and cost-effective management and building solutions. <span class="cbre-has-text-brand-two">Name</span> oversees building upgrades for many of his clients and offers technical due diligence advice to a number of existing clients in his portfolio. <span class="cbre-has-text-brand-two">Name</span> will oversee and mentor the Building Supervisor and provide a high-level guidance and service on the building.</p>
+  </div>
+  <div class="cbre-brand-box cbre-pad-x cbre-pad-y cbre-professional-profile">
+    <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+    <p class="cbre-professional-profile-name"><span class="cbre-has-text-brand-two">First Last</span></p>
+    <p class="cbre-professional-profile-title">Building Services Manager - Asset Services <span class="cbre-has-text-brand-two">City</span></p>
+    <p class="cbre-mar-t"><span class="cbre-has-text-brand-two">Name</span> has over <span class="cbre-has-text-brand-two">00</span> years of experience in building and facility management and has worked for CBRE for the last <span class="cbre-has-text-brand-two">00</span> years. <span class="cbre-has-text-brand-two">Name</span> has worked on significant assets such as <span class="cbre-has-text-brand-two">List Building Name</span>s, and currently oversees a small portfolio of CBD based assets including <span class="cbre-has-text-brand-two">Address close by</span>.</p>
+    <p><span class="cbre-has-text-brand-two">Name</span>’s extensive experience in the hotel hospitality industry prior to <span class="cbre-has-text-brand-two">his/her</span> facility management career has engrained a customer service mentality that results in superior satisfaction of the tenants in <span class="cbre-has-text-brand-two">his/her</span> building.</p>
+  </div>
+  <div class="cbre-brand-box cbre-pad-x cbre-pad-y cbre-professional-profile">
+    <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+    <p class="cbre-professional-profile-name"><span class="cbre-has-text-brand-two">First Last</span></p>
+    <p class="cbre-professional-profile-title">Finance Manager – Asset Services, <span class="cbre-has-text-brand-two">City</span></p>
+    <p class="cbre-mar-t"><span class="cbre-has-text-brand-two">Name</span> has over <span class="cbre-has-text-brand-two">00</span> years of experience in the property industry since joining CBRE in <span class="cbre-has-text-brand-two">Year</span>. As a Finance Manager, she has worked on various portfolios and represented <span class="cbre-has-text-brand-two">List Client Names (examples are: Investec, TrustCapital Advisors, MIRAE Assets, Suntec/ARA, CorVal, Retail Employee Superannuation Trust, QUBE, Valad/Blackstone, GE Capital Real Estate, Heathley Limited, IOOF Holdings Limited and Commonwealth  Bank of Australia).</span></p>
+    <p><span class="cbre-has-text-brand-two">Name’s</span> current responsibilities include overseeing and reviewing monthly property and fund accounting for specific clients, IFRS incentive amortisation and rental smoothing, balance sheet reconciliations, budgeting, forecasting, variance analysis, and annual outgoings reconciliations. <span class="cbre-has-text-brand-two">She/he</span> also assists in trust distributions, tax calculations and preparation of annual statements; working alongside tax consultants and auditors to meet client requirements. <span class="cbre-has-text-brand-two">She/he</span> has vast exposure with property management tools including MRI Software, Cougar V8 Extract tool and the YARDI platform.</p>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-10" id="transition" data-title="Transition">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Transition</h1>
+</div>
+<p class="cbre-mar-t">We take pride in our ability to seamlessly transition management of major appointments. We want to assure you that through our experience, we have the proven systems and processes in place to make this a risk-free decision for <span class="cbre-has-text-brand-two">Address</span>. Our approach will be underpinned by key principles –Experience, Ownership, Accountability, Support and Communication.</p>
+<section class="cbre-pad-y">
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <h2>Experience</h2>
+      <p>We have a strong track record in transitioning assets. Over the last few years we have transitioned on average 75+ properties into CBRE year on year. We are also familiar with transitioning significant properties such as <span class="cbre-has-text-brand-two">list out local properties</span> to name a few.</p>
+    </div>
+    <div class="unit half">
+      <h2>Support &amp; Communication</h2>
+      <p>CBRE will provide a transition platform consisting of technology, procedures and additional personnel if required, to ensure we support the Transition Team and communicate with you at every stage.</p>
+    </div>
+  </div>
+</section>
+<section class="cbre-pad-y">
+  <h2>Ownership &amp; Accountability</h2>
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <p>Dinesh Krishnan, our Transition Director, is dedicated to managing all our property and portfolio transitions. In his role as Director Business Operations, Dinesh is responsible for appointment transitions, business metrics, developing processes and standards to streamline overall business operations. Dinesh will lead the transition, coordinating with the proposed management team to implement the agreed transition plan (collectively referred to as the Transition Team). We instill in all our operators the importance of ownership in all facets of</p>
+    </div>
+    <div class="unit half">
+      <p>property management with the initial transition being critical in future success. Each of our operators understands the importance to undertake a sound and comprehensive transition; creating a foundation for an effective management, and a successful ongoing relationship with you.</p>
+      <p>You have our commitment that our team will  strive for success and be accountable at every stage of the transition process.</p>
+    </div>
+  </div>
+</section>
+<section class="cbre-transition-visual cbre-pad-b">
+  <ul>
+    <li>
+      <div class="cbre-transition-visual-top-level-item">
+        <div class="cbre-headshot-container">
+          <img src="../img/dinesh-krishnan.png" alt="" class="cbre-headshot">
+        </div>
+        <div class="cbre-headshot-content">
+          <strong>DINESH KRISHNAN</strong><br>Transition Director
+        </div>
+      </div>
+      <ul class="cbre-transition-visual-nested-list">
+        <li><strong>DANIELLE LANG</strong><br>Quality &amp; Control  Manager</li>
+        <li><strong>PETER GALANTE</strong><br>Regional Director Business Operations</li>
+        <li><strong>STEFAN KOSNIK</strong><br>Manager Platform &amp; Delivery</li>
+        <li><span class="cbre-has-text-brand-two"><strong>FIRST LAST</strong></span><br>Director <span class="cbre-has-text-brand-two">STATE</span> Asset Services</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-11" id="transition-2" data-title="Transition 2">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <section class="cbre-pad-y">
+  <blockquote>
+    Our experience, ownership and  accountability, coupled with support and  communication enables us to transition  management seamlessly.
+  </blockquote>
+</section>
+<section class="cbre-pad-y">
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <h2>Transition Toolkit</h2>
+      <p>The resources available to the CBRE transition team are extensive and comprehensive. Our online library incorporates over 25 documents related to the transition of a property, including a Property Transition Checklist, which is specific to all operations of a building. This checklist will be refined to specifically meet your transition needs. Other items included for the use of the team during the transition include: tenant letters, vendor letters, forms required for ordering site-specific items, and, an inclusive request for documents from the owner (or prior manager). All of these resources promote a seamless transition process and enable an incredibly compressed timeline if required.</p>
+    </div>
+    <div class="unit half" style="position: relative;">
+      <h2>Kick-off Meeting</h2>
+      <p>On notification of appointment, we will immediately arrange a kick-off meeting with <span class="cbre-has-text-brand-two">Client Name</span> to discuss the strategy for <span class="cbre-has-text-brand-two">Address</span> and all elements of the detailed transition plan, thus ensuring an agreed approach to the service delivery.</p>
+      <img src="../img/transition.jpg" alt="" class="cbre-transition-custom-image">
+    </div>
+  </div>
+</section>
+<section class="cbre-pad-t">
+  <div class="cbre-property-transition-container">
+    <h2>Property Transition</h2>
+    <div class="grid no-gutters">
+      <div class="unit one-third">
+        <h3>Phase One</h3>
+        <ul>
+          <li>Property set-ups in PULSE</li>
+          <li>Tenant set-ups in PULSE</li>
+          <li>Establishing tenancy schedules</li>
+          <li>Contractor set-ups in PULSE</li>
+          <li>Collate and audit lease documentation</li>
+        </ul>
+      </div>
+      <div class="unit one-third">
+        <h3>Phase Two</h3>
+        <ul>
+          <li>Locate and audit guarantees</li>
+          <li>Locate and audit Insurances</li>
+          <li>Rollout contractor communications</li>
+          <li>Rollout customer communications</li>
+          <li>Confirm contractor HSE requirements</li>
+        </ul>
+      </div>
+      <div class="unit one-third">
+        <h3>Phase Three</h3>
+        <ul>
+          <li>Agree limits of authority</li>
+          <li>Create Business Continuity Plan (CBRE Global Risk)</li>
+          <li>Agree 3rd party access rights</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-12" id="platform-systems" data-title="Platform Systems">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Platform &amp; Systems</h1>
+</div>
+<section class="cbre-pad-y">
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <p>Our integrated suite of solutions supports our team to pro-actively monitor and manage your risk, maximising your asset and portfolio values. We have invested significant capital and intellectual property over a number of years ($5 million invested in just the last two years alone) to create the most powerful property management ecosystem in the market today which is agile, customisable and connected to <span class="cbre-has-text-brand-two">Client Name’s</span> deliverables.</p>
+    </div>
+    <div class="unit half">
+      <p>These tools deliver actionable intelligence, assist in risk mitigation, enable nimble decision-making and ensure continuous improvement of service delivery. By partnering with CBRE, you can eliminate the everyday distractions of property management and focus on delivering an exceptional tenant experience.</p>  
+    </div>
+  </div>
+</section>
+<section class="cbre-pad-y">
+  <h2 class="center-on-mobiles">Advantage for <span class="cbre-has-text-brand-two">Client Name</span></h2>
+  <ul class="cbre-advantage-visual">
+    <li>CBRE’s asset management platform PULSE drives actionable intelligence</li>
+    <li>CBRE’s tool ASPIRE integrates with any data source providing views across any variable of your property information</li>
+    <li>Seamless  management and focused reporting to your standards</li>
+  </ul>
+</section>
+<section class="cbre-pad-t">
+  <img src="../img/platform-systems.jpg" alt="" style="width: 100%;">
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-13" id="pulse" data-title="Pulse">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-full-page" style="background-image: url(../img/pulse-bg.jpg);">
+  <h2 class="cbre-has-text-white">Pulse</h2>
+  <div class="cbre-pulse-container cbre-mar-y-more">
+    <section>
+      <blockquote>Our PULSE platform powers the entire spectrum of how we manage property, it integrates and connects every facet of the facilities, property management and accounting processes.</blockquote>
+    </section>
+    <section class="cbre-mar-t">
+      <ul class="cbre-pulse-icon-list">
+        <li class="cbre-pulse-icon-item">
+          <div class="cbre-pulse-icon">
+            <img src="../img/help-desk-icon.png" alt="">
+          </div>
+          <div class="cbre-pulse-content">
+            <h4>Help Desk</h4>
+            <p>Service requests can be instantly logged, acknowledged,  allocated and tracked online or via our dedicated 1300 number.</p>
+          </div>
+        </li>
+        <li class="cbre-pulse-icon-item">
+          <div class="cbre-pulse-icon">
+            <img src="../img/technical-services-icon.png" alt="">
+          </div>
+          <div class="cbre-pulse-content">
+            <h4>Technical Services</h4>
+            <p>Fast and efficient technical management across risk, maintenance and compliance.</p>
+          </div>
+        </li>
+        <li class="cbre-pulse-icon-item">
+          <div class="cbre-pulse-icon">
+            <img src="../img/property-management-icon.png" alt="">
+          </div>
+          <div class="cbre-pulse-content">
+            <h4>Property Management</h4>
+            <p>Used daily by our property managers to capture, manage and  store critical documentation relating to financial transactions (cash and accrual), properties, leases and tenants.</p>
+          </div>
+        </li>
+        <li class="cbre-pulse-icon-item">
+          <div class="cbre-pulse-icon">
+            <img src="../img/contractor-management-icon.png" alt="">
+          </div>
+          <div class="cbre-pulse-content">
+            <h4>Contractor Management</h4>
+            <p>Self-administrated contractor portal featuring an induction  platform across health, safety, environmental and compliance topics.</p>
+          </div>
+        </li>
+        <li class="cbre-pulse-icon-item">
+          <div class="cbre-pulse-icon">
+            <img src="../img/financial-performance-icon.png" alt="">
+          </div>
+          <div class="cbre-pulse-content">
+            <h4>Financial Performance</h4>
+            <p>Benchmarking to PCA standards, asset budget or portfolio targets.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-14" id="contractor-induction-tool" data-title="Contractor Induction Tool">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-pad-t">
+  <h2>Contractor Induction Tool</h2>
+</div>
+<div class="grid no-gutters cbre-vertical-align">
+  <div class="unit half">
+    <p>Ensures our teams can easily administer and induct staff members and sub-contractors at the ready.</p>
+    <ul class="cbre-contractor-induction-list">
+      <li class="cbre-contractor-induction-item">
+        <div class="cbre-contractor-induction-icon">
+          <img src="../img/contractor-icon-one.png" alt="">
+        </div>
+        <div class="cbre-contractor-induction-content">
+          Integrates into our PULSE platform, specifically work order and purchase order flows
+        </div>
+      </li>
+      <li class="cbre-contractor-induction-item">
+        <div class="cbre-contractor-induction-icon">
+          <img src="../img/contractor-icon-two.png" alt="">
+        </div>
+        <div class="cbre-contractor-induction-content">
+          Automatically monitors the contractor’s time on-site using a timing function
+        </div>
+      </li>
+      <li class="cbre-contractor-induction-item">
+        <div class="cbre-contractor-induction-icon">
+          <img src="../img/contractor-icon-three.png" alt="">
+        </div>
+        <div class="cbre-contractor-induction-content">
+          Collects contractor acknowledgment that works have been completed
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="unit half">
+    <img src="../img/contractor-phone.jpg" style="margin: 0 auto; display: block;">
+    <div class="cbre-brand-three-box cbre-pad-y cbre-pad-x cbre-mar-t">
+      <span class="cbre-has-text-brand-two">Client Name</span> will benefit from significant time efficiencies through integration and automation of the PULSE platform.
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-15" id="pulse-aspire" data-title="Pulse Aspire">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-pad-t">
+  <h2>Pulse Aspire</h2>
+</div>
+<div class="cbre-pad-y-more">
+  <img src="../img/pulse-aspire.png" alt="" style="margin: 0 auto; display: block;">
+</div>
+<div class="grid no-gutters">
+  <div class="unit half">
+    <h3>PULSE ASPIRE is our  business analytics tool  which:</h3>
+    <ul>
+      <li>Integrates CBRE and <span class="cbre-has-text-brand-two">Client Name</span>’s data sources into a single view dashboard creating a high-level visual outlook, allowing you to review asset performance and make nimble decisions.</li>
+      <li>Unlimited dashboard drill-downs across financial, arrears, key dates, service requests and sustainability views – customised to <span class="cbre-has-text-brand-two">Client Name</span>’s requirements within just a few clicks.</li>
+      <li>Accessible across all web-enabled devices that allow for faster decision making using real-time</li>
+      <li>One view allowing the team to pro-actively respond to risk and maximise opportunities</li>
+    </ul>
+  </div>
+  <div class="unit half">
+    <h3>Your Advantage</h3>
+    <ul class="cbre-icon-list">
+      <li>
+        <div class="cbre-icon-list-icon">
+          <img src="../img/hazard-icon.png" alt="">
+        </div>
+        <div class="cbre-icon-list-content">
+          Highlight areas of risk and opportunity across your portfolio
+        </div>
+      </li>
+      <li>
+        <div class="cbre-icon-list-icon">
+          <img src="../img/graph-icon.png" alt="">
+        </div>
+        <div class="cbre-icon-list-content">
+          Make better decisions, backed by data
+        </div>
+      </li>
+      <li>
+        <div class="cbre-icon-list-icon">
+          <img src="../img/light-icon.png" alt="">
+        </div>
+        <div class="cbre-icon-list-content">
+          Solve problems you never knew you had
+        </div>
+      </li>
+      <li>
+        <div class="cbre-icon-list-icon">
+          <img src="../img/watch-icon.png" alt="">
+        </div>
+        <div class="cbre-icon-list-content">
+          Puts you in control of your data, anywhere, anytime
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        </div>
+      </div>
+    
+      <div class="page page-16" id="facilities-management-inspection-app" data-title="Facilities Management Inspection App">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <section class="cbre-pad-y">
+  <div class="center-on-mobiles pull-right cbre-pad-l-more cbre-pad-b">
+    <img src="../img/facilities-management-app.jpg" alt="">
+  </div>
+  <h2 class="cbre-heading-has-icon"><img src="../img/facilities-management-app-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Facilities Management Inspection App</span></h2>
+  <p>Designed to manage and reduce risk, our inspection app is used by our facility managers to:</p>
+  <ul>
+    <li>Conduct audits and routine inspections.</li>
+    <li>Upload imagery and commentary on-the-go while on-site to cross-reference at any time.</li>
+    <li>Predefine audit lists per property to capture unique characteristics of and service performance at each site.</li>
+    <li>Integrate with PULSE to assign actions to the relevant personnel.</li>
+    <li>Quickly and efficiently collate content; providing you with visual representation of your asset.</li>
+    <li>Save time allowing them to spend more time focusing on delivering an enhanced tenant experience and less time on the administration.</li>
+  </ul>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-17" id="risk-audit" data-title="Risk Audit">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="grid no-gutters cbre-vertical-align">
+  <div class="unit half">
+    <section class="cbre-pad-y">
+      <h2 class="cbre-heading-has-icon"><img src="../img/facilities-management-app-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">HS&amp;E Risk Audit</span></h2>
+      <p>Used by our facility management, contractors and HS&amp;E teams for the management of corrective and preventative action in tracking of compliance and risk scores from external and internal property audits.</p>
+      <p>The audit seeks to achieve overall reduction in risk by consolidating data, facilitating analysis and reporting for property-specific and portfolio-wide risk analysis.</p>
+    </section>
+    <section class="cbre-pad-y">
+      <h2 class="cbre-heading-has-icon"><img src="../img/facilities-management-app-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Energy Tracking and Building Optimisation</span></h2>
+      <p>Our team will actively monitor and track energy consumption to ensure that <span class="cbre-has-text-brand-two">Address</span> is running as efficiently as possible and reducing any unnecessary expenditure for <span class="cbre-has-text-brand-two">Client Name</span>.</p>
+    </section>
+    <section class="cbre-pad-y">
+      <h2 class="cbre-heading-has-icon"><img src="../img/facilities-management-app-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">The Hub</span></h2>
+      <p>The Hub is our internal team’s intranet where every piece of communication, forms, legal documents, step-by-step guides, client brand books, reinforcement of our standards; everything is here for each and every role in the business to refer to. The Hub provides consistency, time efficiencies and quality control management.</p>
+      <p>The Hub benefits you by allowing your dedicated CBRE team to be spending more time forward-thinking and less time on the administration.</p>
+    </section>
+  </div>
+  <div class="unit half">
+    <div class="cbre-brand-box cbre-pad-y-more cbre-pad-x">
+      Our scalable and fully customisable platform drives efficiencies, optimises performance and delivers sophisticated analysis to ensure <span class="cbre-has-text-brand-two">Client Name</span> is fit for the future.
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-18" id="sustainability" data-title="Sustainability">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Sustainability</h1>
+</div>
+<section class="cbre-pad-y">
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <p>CBRE is committed to sustainability and driving improvements in the way buildings are built, leased, managed, occupied and sold. We offer a comprehensive range of services to assist clients, like Longbow Enterprises, develop and maintain a sustainable approach to property management and operations. Our aim is to enhance the efficiency of your buildings, reduce environmental footprints and operating costs, and ultimately add value to your business.</p>
+      <p>Our extensive track record includes providing consulting services to developers, investors and major occupiers to help them understand their sustainability related business risks and opportunities and realise competitive advantages</p>
+    </div>
+    <div class="unit half">
+      <p>from implementing appropriate strategies. CBRE’s Assessor team provides NABERS ratings to more buildings and portfolios than any other team in Australia. This team also provides building improvement plans, NABERS tracking, and monthly monitoring reports, further demonstrating their technical know-how and ability to deliver on high quality client services.</p>
+      <p>We have aligned our Standard Operating Procedures (SOPs) with Green Star Performance to ensure that as we manage assets, we are aligned with GBCA’s Performance based rating tool, and aligned with industry best practice. CBRE welcomes the opportunity to discuss our sustainability services with Longbow Enterprises.</p>
+    </div>
+  </div>
+</section>
+<div class="cbre-full-width">
+  <img src="../img/2016-sustainability-snapshot.png" alt="">
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-19" id="sustainability-2" data-title="Sustainability 2">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Sustainability</h1>
+</div>
+<section class="cbre-pad-y">
+  <h2>Case Study</h2>
+  <h3 style="font-weight: 300;">Building Optimisation</h3>
+</section>
+<section class="cbre-mar-b-neg">
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <div class="cbre-full-width">
+        <div class="cbre-case-study-image cbre-pad-x-more">
+          <img src="../img/case-study-image.png" alt="">
+        </div>
+        <div class="cbre-case-study-meta-box cbre-brand-three-box cbre-pad-y cbre-pad-x-more">
+          <p>99 ELIZABETH STREET, SYDNEY<br>7,751sqm NLA</p>
+          <hr>
+          <p>A prime boutique 15 level commercial office  building comprising basement and ground floor retail and 14 upper levels of high quality office accommodation. The appointed CBRE management team on 99 Elizabeth Street have successfully implemented a program of effective partner management to ensure optimal efficiency and drive down costs.</p>
+          <blockquote>
+            <p class="cbre-blockquote-quote">[CBRE] has added considerable value to the management of the building... [they were] instrumental in the tender of HVAC, Fire, BMS and access control and through negotiating contracts with service providers, [which] assisted us in making significant savings.</p>
+            <p class="cbre-blockquote-person">Bill Jenkings, Director - Kyko Group,  99 Elizabeth Street.</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="unit half">
+      <h2>Driving Performance</h2>
+      <p>In 2015, post redevelopment, this asset had a preliminary NABERS energy rating of 2.5 stars. The CBRE management team have deployed several initiatives to optimise asset performance, reduce energy consumption and drive down costs. The team have achieved the following outstanding results:</p>
+      <ul class="cbre-case-study-results-list">
+        <li class="cbre-case-study-results-item">6 x half star jump in NABERS energy rating to 5.0 stars with operational expenditure of $48,000 and no capital spend</li>
+        <li class="cbre-case-study-results-item">NABERS commitment agreement of 4.0 well exceeded</li>
+        <li class="cbre-case-study-results-item">Overall, energy consumption on the asset has reduced by 166,800 kWh or 14.1%.</li>
+        <li class="cbre-case-study-results-item">This equates to $25,000 in electricity and $8,000 in Gas.</li>
+      </ul>
+      <p>We look forward to applying the same rigorous  process at your sites to achieve optimal operational performance and maximise savings for <span class="cbre-has-text-brand-two">CLIENT</span>.</p>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-20" id="health-safety-environment-quality-assurance" data-title="Health Safety Environment Quality Assurance">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Health, Safety &amp; Environment &amp; Quality Assurance</h1>
+</div>
+<section class="cbre-pad-y">
+  <blockquote class="cbre-mar-b">As the leading global property services organisation, CBRE are committed to the health, safety and welfare of all our staff and to the people affected by our undertakings, including contractors, students and visitors. CBRE is similarly committed to protection of the environment.</blockquote>
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <p>CBRE recognises that this commitment is a critical component of our overall business strategy. Our goals in workplace safety and environmental management are achieved  through:</p>
+      <ul>
+        <li>Implementing a HSE management system, the cornerstone of which is the CBRE HSE policy</li>
+        <li>Integrating HSE management in all relevant business processes and decisions.</li>
+      </ul>
+      <h2 class="cbre-pad-y">HSEQ Management System (Including Any ISO9001 Compliant Management System)</h2>
+      <p>The CBRE HSE management system has been created specifically to meet the needs of the Pacific region. The system has been developed in accordance with Australian Standards and is comprised of risk management procedures applicable to both the organization as a whole and specific business lines.</p>
+      <p>CBRE effectively communicates and promotes the policies and procedures comprising the HSE management system via a dedicated CBRE HSE website and “the Hub”, designed to create uniformity across the business and act as the main pillar in the storage of all documents associated with managing property.</p>
+    </div>
+    <div class="unit half">
+      <h2 class="cbre-heading-has-icon"><img src="../img/tracking-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Performance  Standards &amp; Tracking:</span></h2>
+      <p>Metrics such as CBRE’s Global Standards establish baseline service delivery expectations for all accounts, while Internal Performance Metrics measure and benchmark performance excellence on a portfolio-wide basis. Our Global Standards are a true differentiator within CBRE’s global platform and reinforce our firm commitment to be held accountable for leading continuous improvement and rapid dissemination of best practices. Components to our standards include:</p>
+      <h2 class="cbre-heading-has-icon cbre-pad-t"><img src="../img/tools-resources-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Tools and Resources:</span></h2>
+      <p>An online library of playbooks, customisable tools, templates and process maps are available to all Asset Services employees via a robust globally based intranet search engine. Users are further encouraged to reach out personally to our rich network of subject experts within CBRE Pacific, Asia Pacific and globally.</p>
+      <h2 class="cbre-heading-has-icon cbre-pad-t"><img src="../img/processes-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Outstanding Processes:</span></h2>
+      <p>We harness the expertise of account teams worldwide in search of outstanding processes which, along with other platform improvements, are collected and communicated to our senior leaders.</p>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-21" id="health-safety-environment-quality-assurance-2" data-title="Health Safety Environment Quality Assurance 2">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <section class="cbre-pad-y">
+  <div class="grid no-gutters">
+    <div class="unit half">
+      <h2 class="cbre-heading-has-icon"><img src="../img/satisfaction-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Client Satisfaction/Feedback</span></h2>
+      <p>Our clients’ objectives drive our account strategy and their real-time feedback informs our service approach.</p>
+      <p>Understand and control the hazards and risk associated with the assets under management</p>
+      <ul>
+        <li>External Property Risk Program – undertaken by an external property risk consultant (for example Prensa) annually or biennially depending on the risk associated  with the asset.</li>
+        <li>Development of a Property Risk Register for each asset in line with CBRE risk control strategies and client requirements.</li>
+        <li>Portfolio and business line risk review; regular periodic review of portfolio and asset class risk to ensure that CBRE knowledge is shared across portfolios and assets.</li>
+      </ul>
+      <h2 class="cbre-heading-has-icon cbre-pad-t"><img src="../img/improvement-icon.png" alt="" class="cbre-heading-icon"><span class="cbre-heading-content">Continual Improvement</span></h2>
+      <h5>Tracking, management and oversight of corrective actions designed to minimise and eliminate risk</h5>
+      <ul>
+        <li>Actions to manage HS&amp;E risk arise from multiple processes including inspections, external audits, changes to legislation and industry standards, incident management and rectification, innovation and improvement Consultation, communication and information sharing.</li>
+        <li>Implementation of portfolio wide consultation groups to ensure sharing of HS&amp;E initiatives</li>
+      </ul>
+      <h5>Learning, Training and Competency</h5>
+      <ul>
+        <li>Development and implementation of HS&amp;E training programs aligned with risk profile</li>
+      </ul>
+    </div>
+    <div class="unit half">
+      <h5>Contractor Management</h5>
+      <ul>
+        <li>Balanced approach to contractor management in line with client and CBRE requirements aligned with procurement processes.</li>
+      </ul>
+      <h5>Incident Management</h5>
+      <ul>
+        <li>Timely and positive management of incidents to ensure harm minimisation and prevention of recurrence.</li>
+      </ul>
+      <p>As part of the CBRE approach to risk management, CBRE will facilitate the external property risk audit program. Frequency of external audits will be at least biennial though in some circumstances, based on the risk of the asset, the asset class or asset history this may be conducted annually. Such audits would be undertaken by a competent and independent health and safety consultant (CBRE recommends Prensa or GreenCap) and would seek to achieve the following:</p>
+      <ul>
+        <li>To identify the physical hazards at the property, assess the risks and make recommendations to control such risk.</li>
+        <li>Confirm that an appropriate health and safety management system (either CBRE’s or in some cases the tenants) is being implemented at the property CBRE will supplement these independent annual/biennial audits, with provision of ongoing monitoring, tracking of completion of corrective action, analysis and identification of trends, management of incidents and recommendation of corrective action to be applied across portfolio and sample assessment of continued compliance with HS&amp;E management systems via CBRE internal assessments.</li>
+        <li>Annual/biennial external Property Risk Audits conducted by an independent consultant.</li>
+        <li>Quarterly Board/executive reporting and oversight – assist you to meet due diligence requirements.</li>
+        <li>Quarterly consultation meetings including minutes and actions with property managers/facility managers to ensure consultation obligations are met.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-22" id="pricing" data-title="Pricing">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-title-bar">
+  <h1>Pricing</h1>
+</div>
+<section class="cbre-pad-y">
+  <h2>Fee Structure</h2>
+  <p>Having considered the requirements of <span class="cbre-has-text-brand-two">Client Name</span> and <span class="cbre-has-text-brand-two">Address</span> our fees for the property  management services will be as follows:</p>
+  <table class="cbre-table cbre-fee-structure">
+    <thead>
+      <th>Fee Type</th>
+      <th>Allocation</th>
+      <th>Total Staff Cost</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Property Management</td>
+        <td><span class="cbre-has-text-brand-two">00</span>%</td>
+        <td><span class="cbre-has-text-brand-two">$0</span> + GST per annum</td>
+      </tr>
+      <tr>
+        <td>Building Management</td>
+        <td><span class="cbre-has-text-brand-two">00</span>%</td>
+        <td><span class="cbre-has-text-brand-two">$0</span> + GST per annum</td>
+      </tr>
+      <tr>
+        <td>Engineering Management</td>
+        <td><span class="cbre-has-text-brand-two">00</span>%</td>
+        <td><span class="cbre-has-text-brand-two">$0</span> + GST per annum</td>
+      </tr>
+      <tr>
+        <td>Real Estate Accounting Services</td>
+        <td><span class="cbre-has-text-brand-two">00</span>%</td>
+        <td><span class="cbre-has-text-brand-two">$0</span> + GST per annum</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total Management Fee</td>
+        <td><span class="cbre-has-text-brand-two">$0</span> + GST per annum</td>
+      </tr>
+    </tfoot>
+  </table>
+  <p>We propose to increase our management fees by 5% on 1 July each year to ensure we are able to  keep in line with staff salary increases and inflation.</p>
+</section>
+<section class="cbre-pad-y">
+  <h2>Additional Fees</h2>
+  <p>Please find below a summary of additional fees related to leasing or other works outside of the base scope of services: Leasing Fees based on Average Annual Gross Rent (excluding incentive):</p>
+  <table class="cbre-table">
+    <thead>
+      <th>Fee Type</th>
+      <th>Fee Calculation</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>New Lease - 1 Year Lease</td>
+        <td>One month's gross rent</td>
+      </tr>
+      <tr>
+        <td>New Lease - 3 Year Lease</td>
+        <td>11% of the first years gross rent</td>
+      </tr>
+      <tr>
+        <td>New Lease - 4 Year Lease</td>
+        <td>12% of the first years gross rent</td>
+      </tr>
+      <tr>
+        <td>New Lease - 5 Year Lease</td>
+        <td>13% of the first years gross rent</td>
+      </tr>
+      <tr>
+        <td>New Lease - Additional Years</td>
+        <td>0.5% for each additional year (max 15%)</td>
+      </tr>
+      <tr>
+        <td>Expansion or Relocation</td>
+        <td>65% of the scale for leasing fees</td>
+      </tr>
+      <tr>
+        <td>Lease Renewals</td>
+        <td>50% of the scale for leasing fees</td>
+      </tr>
+      <tr>
+        <td>Market Rent Review</td>
+        <td>10% of increase in rent achieved with a minimum fee of $600</td>
+      </tr>
+      <tr>
+        <td>Make Good Negotiations</td>
+        <td>7.5% of any settlement collected from the tenant on behalf of the Lessor</td>
+      </tr>
+      <tr>
+        <td>Capex Coordination</td>
+        <td>5% of the project value for projects starting at $20,000</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+        </div>
+      </div>
+    
+      <div class="page page-23" id="conclusion" data-title="Conclusion">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-full-page cbre-conclusion-page" style="background-image: url(../img/conclusion-bg.jpg);">
+  <div class="cbre-pad-y-more">
+    <div class="cbre-brand-box cbre-pad-x-more cbre-pad-y-more cbre-mar-x-more cbre-mar-y-more">
+      <h1>Conclusion</h1>
+      <p>Thank you for the opportunity to submit our proposal for the management of <span class="cbre-has-text-brand-two">Address</span>. We would be delighted to work with you to execute on the ongoing strategic management and provide your team a management platform to ensure this is a successful investment for <span class="cbre-has-text-brand-two">Client Name</span>. We welcome the opportunity to discuss this with your team in further detail. In the meantime, if you have any queries, please do not hesitate to contact <span class="cbre-has-text-brand-two">Name</span> or <span class="cbre-has-text-brand-two">Name</span>.</p>
+    </div>
+    <div class="cbre-white-box cbre-pad-x-more cbre-pad-y-more cbre-mar-x-more cbre-mar-y-more" style="background-color: rgba(255,255,255, 0.9);">
+      <ul class="cbre-conclusion-people-list">
+        <li class="cbre-conclusion-people-item">
+          <div class="cbre-conclusion-people-headshot">
+            <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+          </div>
+          <div class="cbre-conclusion-people-content">
+            <p><span class="cbre-has-text-brand-two">First Last</span><br>Director - <span class="cbre-has-text-brand-two">State</span> Asset Services</p>
+          </div>
+        </li>
+        <li class="cbre-conclusion-people-item">
+          <div class="cbre-conclusion-people-headshot">
+            <img src="../img/default-headshot.png" alt="" class="cbre-headshot">
+          </div>
+          <div class="cbre-conclusion-people-content">
+            <p><span class="cbre-has-text-brand-two">First Last</span><br>Asset Services <span class="cbre-has-text-brand-two">City</span></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    
+      <div class="page page-24" id="back-cover" data-title="Back Cover">
+        <button class="copyHTML tooltipped tooltipped-w" aria-label="Page HTML Copied!">Copy Page HTML</button>
+        <div class="page-markup">
+          <div class="cbre-back-cover">
+  <section class="cbre-back-cover-logo-container">
+    <img src="../img/cbre-logo--brand.png" alt="">
+  </section>
+  <section class="cbre-brand-box cbre-pad-y cbre-pad-x-more">
+    <h1>Contacts</h1>
+    <div class="grid no-gutters">
+      <div class="unit half">
+        <p><span class="cbre-has-text-brand-two">FIRST LAST</span><br>Director - <span class="cbre-has-text-brand-two">STATE</span> Asset Services<br><span class="cbre-has-text-brand-two">0400 000 000</span></p>
+      </div>
+      <div class="unit half">
+        <p><span class="cbre-has-text-brand-two">FIRST LAST</span><br>Director - <span class="cbre-has-text-brand-two">CITY</span> Asset Services<br><span class="cbre-has-text-brand-two">0400 000 000</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="align-center cbre-pad-y cbre-mar-t-more cbre-pad-x-more">
+    <p>The information set out in this document has been prepared using information derived from a variety of external sources and is intended as a guide only and may be subject to change. CBRE does not warrant the accuracy of any of the information and does not accept legal liability or responsibility for any injury, loss or damage incurred by the use of, reliance on, or interpretation of the information contained herein.</p>
+    <p>This confidential document is for the sole use of persons directly provided with it by CBRE and it is not to be resupplied to any other person without the prior written consent of CBRE. Use by, or reliance upon this document by any other person is not authorised by CBRE and without limitation to the above disclaimers, CBRE are not liable for any loss arising from such unauthorised use or reliance.</p>
+  </section>
+</div>
+        </div>
+      </div>
+    
   </div>
   <script src="/js/libs/clipboard.min.js"></script>
   <script src="/js/application.js"></script>

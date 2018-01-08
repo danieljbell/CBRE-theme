@@ -1,5 +1,17 @@
+# ignore build stuff
+_inlcudes/
+_pages/
+_src/
+_config.yml
+Gemfile
+Gemfile.lock
+gulpfile.js
+package.json
+
+
+# Repo things
 node_modules/
-css/
-js/
+# css/
+# js/
 _site/
 npm-debug.log

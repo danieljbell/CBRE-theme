@@ -1,0 +1,75 @@
+#content_editor h1 {
+  color: #58595B;
+  font-family: "Futura PT";
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 300;
+  margin: 0 0 40px 0; }
+
+#content_editor h2 {
+  color: #6BBE45;
+  font-family: "Futura PT";
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 300;
+  margin: 0 0 4px 0; }
+
+#content_editor h3 {
+  color: #006B4E;
+  font-family: "Futura PT";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0 0 4px 0; }
+
+#content_editor h4 {
+  color: #58595B;
+  font-family: "Futura PT";
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 0 0 4px 0; }
+
+#content_editor h5 {
+  color: #006B4E;
+  font-family: "Futura PT";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  margin: 24px 0 24px 0; }
+
+#content_editor h6 {
+  color: #58595B;
+  font-family: "Futura PT";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0; }
+
+#content_editor p {
+  color: #58595B;
+  font-family: "Futura PT";
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  margin: 0 0 20px 0; }
+
+#content_editor a {
+  color: #E01F26; }
+
+#content_editor table {
+  width: 100%;
+  border-spacing: 0;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 0px;
+  background-color: #EFEFF0;
+  font-family: "Futura PT"; }
+
+#content_editor table th,
+  #content_editor table td {
+    padding: 10px 10px 10px 10px; }
+
+#content_editor table th {
+    background-color: #006B4E;
+    color: #fff; }
