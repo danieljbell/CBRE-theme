@@ -13,8 +13,8 @@
   background-size: cover;
   background-position: center;
   @media print {
-    left: -1in;
-    top: -1in;
+    left: -0.5in;
+    top: -0.5in;
     width: 8.5in;
     min-height: 11in;
   }
@@ -26,7 +26,7 @@
   left: -30px;
   width: calc(100% + 60px);
   @media print {
-    left: -1in;
+    left: -0.5in;
     width: 8.5in;
   }
   

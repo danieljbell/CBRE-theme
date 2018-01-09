@@ -27,6 +27,11 @@
     margin-left: 0px;
     margin-right: 0px;
   }
+  @media print {
+    .pdf-page-content & {
+      margin-top: 1.75in !important;
+    }
+  }
 }
 
 .cbre-cover-page-logo-container {
@@ -35,6 +40,10 @@
   position: relative;
   left: -30px;
   width: calc(100% + 60px);
+  @media print {
+    left: -0.5in;
+    width: 9in;
+  }
   img {
     display: block;
     margin: 0 auto;

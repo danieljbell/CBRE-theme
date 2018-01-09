@@ -15,6 +15,10 @@
     height: 75px;
     border-top: 2px solid white;
     border-left: 2px solid white;
+    @media print {
+      left: 0.125in;
+      top: 0.125in;
+    }
   }
 
   .cbre-headshot {

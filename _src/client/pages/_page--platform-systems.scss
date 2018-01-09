@@ -14,6 +14,11 @@
     flex-direction: column;
     align-items: center;
   }
+  @media print {
+    width: 8.5in;
+    display: table;
+    vertical-align: middle;
+  }
 
   &:after {
     content: '';
@@ -28,6 +33,9 @@
       transform: rotate(90deg);
       width: 150%;
       max-width: 300px;
+    }
+    @media print {
+      left: -0in;
     }
   }
 
@@ -46,6 +54,18 @@
     @media screen and (max-width: 568px) {
       margin-bottom: 30px;
     }
+    @media print {
+      display: table-cell;
+      width: 1.75in;
+      height: 1.75in;
+      max-width: 1.75in;
+      max-height: 1.75in;
+      // margin-right: 1in;
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+    }
+
   }
 
 }

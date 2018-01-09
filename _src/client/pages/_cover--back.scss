@@ -8,6 +8,9 @@
       max-width: initial;
       width: calc(100% + 60px);
     }
+    @media print {
+      left: -0.5in;
+    }
 
     h1 {
       margin-bottom: 0.5em !important;

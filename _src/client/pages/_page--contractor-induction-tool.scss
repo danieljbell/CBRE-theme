@@ -9,16 +9,28 @@
   .cbre-contractor-induction-item {
     display: flex;
     align-items: center;
+    @media print {
+      display: table;
+    }
   }
 
   .cbre-contractor-induction-icon {
     flex-shrink: 0;
     margin-right: 10px;
+    @media print {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 
   .cbre-contractor-induction-content {
     font-size: 0.85em !important;
     line-height: 1.4 !important;
+    @media print {
+      margin-left: 0.125in;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
   }
 
 }

@@ -6,6 +6,28 @@ GITHUB REPO: https://github.com/danieljbell/CBRE-theme
 ======================================================
 */
 
+// ====================
+// LOADING CUSTOM FONT
+// ====================
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://mytinder.s3.amazonaws.com/assets/account/2702/fonts/Futura-Medium_1515513402.ttf);
+}
+@font-face {
+  font-family: 'Futura Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://mytinder.s3.amazonaws.com/assets/account/2702/fonts/Futura-CondensedExtraBold_1515513450.ttf);
+}
+@font-face {
+  font-family: 'Futura';
+  font-style: italic;
+  font-weight: 500;
+  src: url(https://mytinder.s3.amazonaws.com/assets/account/2702/fonts/Futura-MediumItalic_1515513456.ttf);
+}
+
 // =========================
 // THEME BUILDER OVERRIDES
 // =========================

@@ -34,6 +34,24 @@
     @media screen and (max-width: 735px) {
       justify-content: initial;
     }
+    @media print {
+      display: table;
+      width: 100%;
+      max-width: 2in;
+      .cbre-headshot-container,
+      .cbre-headshot-content {
+        display: table-cell;
+      }
+      // text-align: center;
+      // .cbre-headshot-container,
+      // .cbre-headshot-content {
+      //   display: inline-block;
+      // }
+      // .cbre-headshot-content {
+      //   margin-top: -0.5in;
+      //   margin-bottom: -0.5in;
+      // }
+    }
 
     &:after {
       content: '';
@@ -61,6 +79,14 @@
       margin-top: 15px;
       margin-left: 61px;
     }
+    @media print {
+      text-align: justify;
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+    }
 
     &:before {
       content: '';
@@ -86,6 +112,10 @@
       position: relative;
       @media screen and (max-width: 735px) {
         margin-right: 0;
+      }
+      @media print {
+        display: inline-block;
+        width: 1.75in;
       }
 
       &:first-child:before,

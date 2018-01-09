@@ -2,9 +2,9 @@
   font-size: 0.85em !important;
   line-height: 1.4 !important;
   
-  tfoot {
+  tfoot td {
     color: #fff;
-    background-color: $brand;
+    background-color: $brand !important;
   }
 
   &.cbre-fee-structure {

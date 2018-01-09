@@ -5,6 +5,10 @@
       margin-left: 105px;
       max-width: 55%;
     }
+    @media print {
+      margin-left: 1.25in !important;
+      max-width: 6.25in;
+    }
   }
 
 }
@@ -37,6 +41,21 @@
     #content_editor &,
     .pdf-page-content & {
       margin-bottom: 0 !important;
+    }
+    @media print {
+      .cbre-pulse-icon {
+        float: left;
+      }
+      .cbre-pulse-content {
+        margin-left: 1.25in;
+        max-width: 6.25in;
+      }
+      // display: table;
+      // width: 100%;
+      // .cbre-pulse-icon,
+      // .cbre-pulse-content {
+      //   display: table-cell;
+      // }
     }
   }
 

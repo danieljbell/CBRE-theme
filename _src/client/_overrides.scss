@@ -2,19 +2,33 @@
 #content_editor h1,
 .pdf-page-content h1 {
   text-transform: uppercase;
+  font-family: $base-font-family !important;
+  font-weight: 500 !important;
 }
 
 #content_editor h2,
 .pdf-page-content h2 {
   text-transform: uppercase;
-  font-family: $base-font-family;
+  font-family: $base-font-family !important;
+  font-weight: 500 !important;
 }
 
 #content_editor blockquote,
 .pdf-page-content blockquote {
   color: $brand-three;
   font-size: 1.25em !important;
+  line-height: 1.4 !important;
   font-family: $base-font-family;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+#content_editor p,
+.pdf-page-content p {
+  @media print {
+    font-size: 0.85em !important;
+    line-height: 1.4 !important;
+  }
 }
 
 #content_editor ul,
@@ -69,6 +83,9 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   } 
+  @media print {
+    float: right !important;
+  }
 }
 
 
