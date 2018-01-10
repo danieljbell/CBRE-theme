@@ -1,0 +1,21 @@
+@page pricing-page {
+  margin-bottom: 0;
+}
+
+.cbre-pricing-page {
+  page: pricing-page;
+  section p {
+    @media print {
+      margin-bottom: 0 !important;
+    }
+  }
+  section.cbre-pad-y:nth-child(3) {
+    @media print {
+      padding-top: 0 !important;
+      table {
+        margin-bottom: -1in !important;
+      }
+    }
+  }
+}
+

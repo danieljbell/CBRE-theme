@@ -4,6 +4,9 @@
   @media screen and (max-width: 568px) {
     margin-top: 60px;
   }
+  @media print {
+    padding-bottom: 0 !important;
+  }
 
 
   &:before {

@@ -10,9 +10,15 @@
     top: auto;
     max-width: 100% !important;
   }
+  @media print {
+    right: -0.5in;
+  }
 }
 
 .cbre-property-transition-container {
+  @media print {
+    margin-top: 0.25in !important;
+  }
   
   .grid .one-third {
     @media screen and (max-width: 568px) {

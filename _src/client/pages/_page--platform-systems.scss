@@ -1,3 +1,7 @@
+.cbre-platform-systems {
+  page: custom-page;
+}
+
 .cbre-advantage-visual {
   margin-top: 20px;
   list-style-type: none;
@@ -15,9 +19,7 @@
     align-items: center;
   }
   @media print {
-    width: 8.5in;
-    display: table;
-    vertical-align: middle;
+    margin-bottom: -0.25in;
   }
 
   &:after {
@@ -36,6 +38,7 @@
     }
     @media print {
       left: -0in;
+      width: 99%;
     }
   }
 
@@ -54,8 +57,13 @@
     @media screen and (max-width: 568px) {
       margin-bottom: 30px;
     }
-    @media print {
-      display: table-cell;
+    // @media print {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 7.5em;
+      &:last-child {
+        margin-right: 0;
+      }
       width: 1.75in;
       height: 1.75in;
       max-width: 1.75in;
@@ -64,6 +72,15 @@
       // &:last-child {
       //   margin-right: 0;
       // }
+    // }
+
+    .cbre-advantage-visual-content {
+      @media print {
+        display: inline-block;
+        vertical-align: middle;
+        height: 1.75in;
+        max-height: 1.75in;
+      }
     }
 
   }

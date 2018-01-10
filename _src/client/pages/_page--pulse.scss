@@ -23,6 +23,9 @@
   p {
     margin-bottom: 0 !important;
     color: #fff !important;
+    .pdf-page-content & {
+      font-size: $paragraph-font-size !important;
+    }
   }
 
   h4 {

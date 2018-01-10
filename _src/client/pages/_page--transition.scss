@@ -1,3 +1,11 @@
+@page custom-page {
+  margin-bottom: 0in !important;
+}
+
+.cbre-transition-one {
+  page: custom-page;
+}
+
 .cbre-transition-visual {
 
   ul {
@@ -35,22 +43,15 @@
       justify-content: initial;
     }
     @media print {
-      display: table;
       width: 100%;
-      max-width: 2in;
+      max-width: 20em;
+      margin-left: auto;
+      margin-right: auto;
       .cbre-headshot-container,
       .cbre-headshot-content {
-        display: table-cell;
+        display: inline-block;
+        vertical-align: middle;
       }
-      // text-align: center;
-      // .cbre-headshot-container,
-      // .cbre-headshot-content {
-      //   display: inline-block;
-      // }
-      // .cbre-headshot-content {
-      //   margin-top: -0.5in;
-      //   margin-bottom: -0.5in;
-      // }
     }
 
     &:after {
@@ -79,23 +80,14 @@
       margin-top: 15px;
       margin-left: 61px;
     }
-    @media print {
-      text-align: justify;
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
-      }
-    }
 
     &:before {
       content: '';
       position: absolute;
-      left: 1em;
-      right: 1em;
+      left: 1px;
+      right: 1px;
       top: -30px;
       border-bottom: 2px solid $brand-three;
-      width: calc(100% - 2.1em);
       @media screen and (max-width: 735px) {
         display: none;
       }
@@ -108,14 +100,22 @@
       line-height: 1.2 !important;
       flex: 1;
       border: 1px solid $brand-three;
-      margin: 0 1em;
+      margin: 0 1.5em;
       position: relative;
       @media screen and (max-width: 735px) {
         margin-right: 0;
       }
       @media print {
         display: inline-block;
-        width: 1.75in;
+        max-width: 10em;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
 
       &:first-child:before,
@@ -125,6 +125,10 @@
         width: 1px;
         height: 30px;
         bottom: calc(100% + 15px);
+        @media print {
+          height: 0.3in;
+          bottom: 0.85in;
+        }
       }
 
       &:first-child:before {
@@ -135,6 +139,9 @@
       &:last-child:before {
         border-right: 2px solid $brand-three;
         right: 0;
+        @media print {
+          right: -0.025in;
+        }
       }
 
       @media screen and (max-width: 735px) {

@@ -1,3 +1,28 @@
+@page case-study {
+  margin-bottom: 0in !important;
+}
+
+@page quality-assurance-two {
+  margin-bottom: 0in !important;
+}
+
+.cbre-health-saftey-environment-quality-assurance-two {
+  page: quality-assurance-two;
+}
+
+.cbre-case-study-page,
+.cbre-health-saftey-environment-quality-assurance {
+  page: case-study;
+}
+
+.cbre-health-saftey-environment-quality-assurance {
+  blockquote {
+    @media print {
+      font-size: 1em !important;
+    }
+  }
+}
+
 .cbre-case-study-results-list {
   list-style-type: none;
   margin-bottom: 1em !important;
@@ -71,8 +96,11 @@
     position: relative;
     font-size: 1.1em !important;
     line-height: 1.4 !important;
+    margin: 0 !important;
     @media print {
-      font-size: 0.5em !important;
+      .pdf-page-content & {
+        font-size: 0.7em !important;
+      }
     }
     
     &:before,
@@ -91,10 +119,16 @@
     }
 
     &:after {
-      position: absolute;
+      position: relative;
       bottom: 0em;
     }
 
   }
 
+}
+
+@media print {
+  .cbre-case-study-page .cbre-full-width {
+    width: 4.25in !important;
+  }
 }
